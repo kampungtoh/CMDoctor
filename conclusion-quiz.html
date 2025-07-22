@@ -1,1 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>結語與覆盤</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* 這些樣式需要複製到每個獨立的內容頁面中，以確保顯示一致性 */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff; /* Changed to white */
+        }
+        .infographic-card {
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #e2e8f0;
+        }
+        .infographic-section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .icon-large {
+            font-size: 4rem;
+            line-height: 1;
+            display: block;
+            margin: 0 auto 0.5rem; /* Centering the icon */
+        }
+        .list-center-items li {
+            text-align: center;
+            list-style-position: inside; /* Ensures the bullet is inside the centered text */
+        }
+        .signature-message, .quiz-message {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .signature-message.show, .quiz-message.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="p-4">
+    <!-- Conclusion -->
+    <div class="infographic-card bg-gradient-to-br from-blue-100 to-blue-200 text-center">
+        <h2 class="infographic-section-title text-blue-700">結語：奇美醫師，加油！</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+            加入奇美醫院，您將開啟一段充滿挑戰和成長的職涯旅程。希望這份新手攻略能幫助您快速適應環境，在奇美醫院發光發熱。記住，奇美醫院是一個大家庭，在這裡您將獲得支持、鼓勵和成長的機會。祝您在奇美醫院一切順利！
+        </p>
+        <span class="icon-large">👍</span>
+
+        <div class="bg-white p-4 rounded-lg shadow-inner mt-6">
+            <h3 class="font-bold text-xl text-blue-800 mb-3">院長的話</h3>
+            <p class="text-gray-700 italic">
+                「親愛的新進醫師們，歡迎您加入奇美醫院這個大家庭！我們深知醫療工作的挑戰與責任，也明白您在面對新環境時可能有的不安。奇美醫院始終秉持『關懷、專業、效率』的核心價值，致力於提供最優質的醫療服務，同時也將每位同仁視為最寶貴的資產。在這裡，您將有機會與頂尖的醫療團隊合作，不斷學習成長，並在臨床、教學、研究各方面發光發熱。我們承諾會成為您最堅實的後盾，提供完善的資源與支持，讓您能夠安心工作，實現個人與專業的理想。期待與您攜手，共同守護民眾健康，開創奇美醫療的新篇章！」
+            </p>
+          <div style="text-align: center; margin-top: 20px;">
+              <img src="https://sub.chimei.org.tw/57900/images/07_members/Hung-Jung-Lin.jpg" alt="林宏榮院長" style="max-width: 100%; height: auto;">
+              <div style="margin-top: 10px; font-weight: bold;">林宏榮院長</div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Quiz Section -->
+    <div class="infographic-card bg-gradient-to-br from-gray-100 to-gray-200">
+        <h2 class="infographic-section-title text-gray-800">小問題覆盤</h2>
+        <form id="quizForm" class="space-y-6">
+            <!-- Question 1 -->
+            <div>
+                <p class="font-semibold text-gray-800 mb-2">1. 在奇美醫院值班時遇到疑難雜症，第一時間應向誰請教？</p>
+                <div class="flex flex-col space-y-2">
+                    <label class="inline-flex items-center">
+                        <input type="radio" class="form-radio text-blue-600" name="q1" value="a">
+                        <span class="ml-2 text-gray-700">A. 病人</span>
+                    </label>
+                    <label class="inline-flex items-center">
+                        <input type="radio" class="form-radio text-blue-600" name="q1" value="b">
+                        <span class="ml-2 text-gray-700">B. 學長姐</span>
+                    </label>
+                    <label class="inline-flex items-center">
+                        <input type="radio" class="form-radio text-blue-600" name="q1" value="c">
+                        <span class="ml-2 text-gray-700">C. 護理師</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div>
+                <p class="font-semibold text-gray-800 mb-2">2. 奇美醫院的核心價值不包含下列哪一項？</p>
+                <div class="flex flex-col space-y-2">
+                    <label class="inline-flex items-center">
+                        <input type="radio" class="form-radio text-blue-600" name="q2" value="a">
+                        <span class="ml-2 text-gray-700">A. 關懷</span>
+                    </label>
+                    <label class="inline-flex items-center">
+                        <input type="radio" class="form-radio text-blue-600" name="q2" value="b">
+                        <span class="ml-2 text-gray-700">B. 創新</span>
+                    </label>
+                    <label class="inline-flex items-center">
+                        <input type="radio" class="form-radio text-blue-600" name="q2" value="c">
+                        <span class="ml-2 text-gray-700">C. 專業</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div>
+                <p class="font-semibold text-gray-800 mb-2">3. 奇美醫院的員工協助方案(EAP)主要提供哪種服務？</p>
+                <div class="flex flex-col space-y-2">
+                    <label class="inline-flex items-center">
+                        <input type="radio" class="form-radio text-blue-600" name="q3" value="a">
+                        <span class="ml-2 text-gray-700">A. 員工旅遊規劃</span>
+                    </label>
+                    <label class="inline-flex items-center">
+                        <input type="radio" class="form-radio text-blue-600" name="q3" value="b">
+                        <span class="ml-2 text-gray-700">B. 心理諮詢與關懷</span>
+                    </label>
+                    <label class="inline-flex items-center">
+                        <input type="radio" class="form-radio text-blue-600" name="q3" value="c">
+                        <span class="ml-2 text-gray-700">C. 薪資調整建議</span>
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-md shadow-lg transition-all duration-300 transform hover:scale-105 w-full">
+                提交測驗
+            </button>
+        </form>
+        <p id="quizMessage" class="quiz-message text-center mt-4"></p>
+    </div>
+
+    <!-- Signature Section -->
+    <div class="infographic-card bg-gradient-to-br from-gray-100 to-gray-200">
+        <h2 class="infographic-section-title text-gray-800">閱讀確認</h2>
+        <p class="text-gray-700 mb-4 text-center">請輸入您的人事號以確認已閱讀本攻略：</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+            <input type="text" id="personnelIdInput" placeholder="您的人事號" class="p-3 border border-gray-300 rounded-md w-full sm:w-auto flex-grow focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <button id="confirmReadButton" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-md shadow-lg transition-all duration-300 transform hover:scale-105">
+                確認閱讀
+            </button>
+        </div>
+        <p id="signatureMessage" class="signature-message text-green-600 font-semibold text-center mt-4"></p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Quiz functionality
+            const quizForm = document.getElementById('quizForm');
+            const quizMessage = document.getElementById('quizMessage');
+            const correctAnswers = {
+                q1: 'b', // 學長姐
+                q2: 'b', // 創新 (奇美核心價值是關懷、專業、效率，因此創新不包含在內)
+                q3: 'b'  // 心理諮詢與關懷
+            };
+
+            quizForm.addEventListener('submit', (event) => {
+                event.preventDefault(); // Prevent form submission
+
+                let score = 0;
+                let allAnswered = true;
+
+                // Check each question
+                for (const questionName in correctAnswers) {
+                    const selectedOption = quizForm.querySelector(`input[name="${questionName}"]:checked`);
+                    if (selectedOption) {
+                        if (selectedOption.value === correctAnswers[questionName]) {
+                            score++;
+                        }
+                    } else {
+                        allAnswered = false;
+                        break; // Stop if any question is not answered
+                    }
+                }
+
+                if (!allAnswered) {
+                    quizMessage.textContent = '請完成所有題目再提交。';
+                    quizMessage.classList.add('show');
+                    quizMessage.style.color = 'red';
+                    setTimeout(() => {
+                        quizMessage.classList.remove('show');
+                        quizMessage.style.color = ''; // Reset color
+                    }, 3000);
+                    return;
+                }
+
+                quizMessage.textContent = `您答對了 ${score} 題！`;
+                quizMessage.classList.add('show');
+                quizMessage.style.color = score === Object.keys(correctAnswers).length ? 'green' : 'orange'; // Green if all correct, orange otherwise
+
+                setTimeout(() => {
+                    quizMessage.classList.remove('show');
+                    quizMessage.style.color = ''; // Reset color
+                }, 5000);
+            });
+
+            // Signature functionality
+            const personnelIdInput = document.getElementById('personnelIdInput');
+            const confirmReadButton = document.getElementById('confirmReadButton');
+            const signatureMessage = document.getElementById('signatureMessage');
+
+            confirmReadButton.addEventListener('click', () => {
+                const personnelId = personnelIdInput.value.trim();
+                if (personnelId) {
+                    signatureMessage.textContent = `感謝人事號 ${personnelId} 的醫師完成閱讀本攻略！祝您在奇美醫院一切順利！`;
+                    signatureMessage.classList.add('show');
+                    personnelIdInput.value = ''; // Clear input after signing
+                    setTimeout(() => {
+                        signatureMessage.classList.remove('show');
+                    }, 5000); // Message disappears after 5 seconds
+                } else {
+                    signatureMessage.textContent = '請輸入您的人事號。';
+                    signatureMessage.classList.add('show');
+                    signatureMessage.style.color = 'red';
+                    setTimeout(() => {
+                        signatureMessage.classList.remove('show');
+                        signatureMessage.style.color = 'green'; // Reset color
+                    }, 3000); // Error message disappears after 3 seconds
+                }
+            });
+        });
+    </script>
+</body>
+</html>
 
