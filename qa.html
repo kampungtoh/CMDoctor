@@ -1,1 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* 這些樣式需要複製到每個獨立的內容頁面中，以確保顯示一致性 */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff; /* Changed to white */
+        }
+        .infographic-card {
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #e2e8f0;
+        }
+        .infographic-section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .icon-large {
+            font-size: 4rem;
+            line-height: 1;
+            display: block;
+            margin: 0 auto 0.5rem; /* Centering the icon */
+        }
+        .list-center-items li {
+            text-align: center;
+            list-style-position: inside; /* Ensures the bullet is inside the centered text */
+        }
+        .qa-item {
+            background-color: #f8fafc; /* bg-gray-50 */
+            border-left: 4px solid #3b82f6; /* border-blue-500 */
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        }
+        .qa-question {
+            font-weight: 600;
+            color: #1f2937; /* text-gray-900 */
+            margin-bottom: 0.5rem;
+        }
+        .qa-answer {
+            color: #4b5563; /* text-gray-700 */
+        }
+    </style>
+</head>
+<body class="p-4">
+    <div class="infographic-card bg-gradient-to-br from-teal-50 to-cyan-100">
+        <h2 class="infographic-section-title">Q&A：常見問題集</h2>
+        <span class="icon-large text-center">❓</span>
 
+        <div class="space-y-4">
+            <div class="qa-item">
+                <p class="qa-question">Q: 醫院附近有哪些推薦的用餐地點？</p>
+                <p class="qa-answer">A: 院內有員工餐廳 (第一醫療大樓 B1)和 CB cafe (一二空橋及二五空橋)。院外周邊也有7-ELEVEN、全家、小吃店和餐廳可供選擇。</p>
+            </div>
+            <div class="qa-item">
+                <p class="qa-question">Q: 如果感到工作壓力大或情緒低落，醫院有提供什麼資源嗎？</p>
+                <p class="qa-answer">A: 奇美醫院設有員工協助方案（EAP），提供免費心理諮詢服務。此外，關懷委員會也會提供支持與關懷，並定期舉辦紓壓工作坊。</p>
+            </div>
+            <div class="qa-item">
+                <p class="qa-question">Q: 醫院的停車位好找嗎？如何申請員工停車證？</p>
+                <p class="qa-answer">A: 醫院提供汽車和機車停車位。機車可免費停放，見（實）習生憑識別證可至總務室申請免費機車停車證。汽車停車需至總務室辦理申請。建議提早申請，詳情請洽總務室。</p>
+            </div>
+            <div class="qa-item">
+                <p class="qa-question">Q: 新進醫師有機會申請員工宿舍嗎？</p>
+                <p class="qa-answer">A: 奇美醫院永康院區周邊有提供員工宿舍。若無宿舍需求，附近也有許多租屋選擇，可向人事部門或資深同仁詢問相關資訊。</p>
+            </div>
+            <div class="qa-item">
+                <p class="qa-question">Q: 醫院的網路資源（如期刊、資料庫）如何使用？</p>
+                <p class="qa-answer">A: 您可以透過醫院圖書館的電子資源查詢系統（https://lib.chimei.org.tw/）登入使用豐富的電子資源，包括醫學期刊、資料庫等。請使用人事號及身份證/居留證末四碼進行登入。</p>
+            </div>
+            <div class="qa-item">
+                <p class="qa-question">Q: 醫院是否有提供進修或學術交流的機會？</p>
+                <p class="qa-answer">A: 奇美醫院非常鼓勵醫師持續學習與發展。醫院定期舉辦院內在職教育、學術會議和研討會，並提供國內外短期或長期進修的薪資補助與機票補助。詳情請洽教學部。</p>
+            </div>
+            <div class="qa-item">
+                <p class="qa-question">Q: 醫院的總機電話是多少？</p>
+                <p class="qa-answer">A: 奇美醫院總機電話是 06-2812811。總機請撥 9。</p>
+            </div>
+            <div class="qa-item">
+                <p class="qa-question">Q: 如果遇到系統操作問題，應該聯絡哪個部門？</p>
+                <p class="qa-answer">A: 您可以聯絡資訊室，從《系統主程式》可以找到各個不同系統負責人的聯絡電話。</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
