@@ -1,1 +1,249 @@
 
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>醫療品質篇</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* 這些樣式需要複製到每個獨立的內容頁面中，以確保顯示一致性 */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff; /* Changed to white */
+        }
+        .infographic-card {
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #e2e8f0;
+        }
+        .infographic-section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .icon-large {
+            font-size: 4rem;
+            line-height: 1;
+            display: block;
+            margin: 0 auto 0.5rem; /* Centering the icon */
+        }
+        .list-center-items li {
+            text-align: center;
+            list-style-position: inside; /* Ensures the bullet is inside the centered text */
+        }
+        /* Style for sub-section icons */
+        .sub-section-icon {
+            font-size: 2.5rem; /* Smaller icon for sub-sections */
+            line-height: 1;
+            display: block;
+            margin: 0 auto 0.5rem;
+            color: #3b82f6; /* Blue color for emphasis */
+        }
+        .sub-section-title {
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* font-semibold */
+            color: #1f2937; /* text-gray-900 */
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .sub-section-content ul {
+            padding-left: 1.5rem; /* Indent for list items */
+        }
+        .sub-section-content li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body class="p-4">
+    <div class="infographic-card bg-gradient-to-br from-red-50 to-red-100">
+        <h2 class="infographic-section-title">四、醫療品質篇：以病人為中心，持續改善</h2>
+        <span class="icon-large">🛡️</span>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mt-6">
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                <span class="sub-section-icon">📈</span>
+                <h3 class="sub-section-title">4.1 品質指標</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-1">
+                    <li>醫療品質指標：感染率、死亡率、再住院率等。</li>
+                    <li>病人安全指標：藥物不良反應、跌倒事件、壓瘡發生率等。</li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                <span class="sub-section-icon">⚙️</span>
+                <h3 class="sub-section-title">4.2 品質改善工具</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-1">
+                    <li>PDCA循環：Plan-Do-Check-Act，持續改善醫療品質。</li>
+                    <li>根本原因分析：Root Cause Analysis，找出問題根本原因。</li>
+                    <li>失效模式與效應分析：Failure Mode and Effects Analysis，預防潛在風險。</li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                <span class="sub-section-icon">🤝</span>
+                <h3 class="sub-section-title">4.3 品質安全文化</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-1">
+                    <li>鼓勵通報：鼓勵醫護人員通報錯誤和疏失，共同學習。</li>
+                    <li>不責備文化：找出系統性問題，而非責備犯錯者。</li>
+                    <li>團隊合作：共同提升醫療品質和病人安全。</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3 class="text-lg font-semibold mb-2 text-gray-800 mt-6 text-center">4.4 災害呼叫代號與應變</h3>
+        <p class="text-gray-700 mb-4 text-center">熟悉醫院的災害呼叫代號與應變流程，是確保病人與自身安全的重要一環。</p>
+        <span class="icon-large">🚨</span>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-blue-50 p-4 rounded-lg shadow-sm">
+                <h4 class="font-bold text-md text-blue-800 mb-2">災害呼叫代號</h4>
+                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+                    <li>333：大量傷患</li>
+                    <li>黃色333：毒化災大量傷患</li>
+                    <li>999：急救事件</li>
+                    <li>兒童999：兒童 (16歲以下) 急救事件</li>
+                    <li>全院綠色：火災</li>
+                </ul>
+            </div>
+            <div class="bg-green-50 p-4 rounded-lg shadow-sm">
+                <h4 class="font-bold text-md text-green-800 mb-2">院內啟動急救事件 999 之人力支援團隊</h4>
+                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+                    <li>上班時段醫師：負責照護之主治醫師、住院醫師、專科護理師、該科總醫師 (Fellow)。</li>
+                    <li>值班時段醫師：該值班線別醫師及值班總醫師。</li>
+                    <li>護理師：原則上、下、左、右之樓層護理站支援護理人力各 1 名，由發生單位當班主管或值班護理長協助調度。</li>
+                    <li>兒童999：急診及 4AI 團隊支援，4AI 團隊需支援 1 位醫師與 1 位護理師，並攜帶兒童急救設備。</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3 class="text-lg font-semibold mb-2 text-gray-800 mt-6 text-center">4.5 儀器保養作業原則</h3>
+        <p class="text-gray-700 mb-4 text-center">確保醫療儀器正常運作是病人安全的基石，請務必了解儀器保養的相關原則。</p>
+        <span class="icon-large">🛠️</span>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-purple-50 p-4 rounded-lg shadow-sm">
+                <h4 class="font-bold text-md text-purple-800 mb-2">一級保養 (使用部門負責)</h4>
+                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+                    <li>定期清潔消毒及功能檢視 (一般保養/每月、加強保養/每年)。</li>
+                    <li>人員儀器使用前應執行重點檢測，使用後進行必要的一級保養。</li>
+                </ul>
+            </div>
+            <div class="bg-yellow-50 p-4 rounded-lg shadow-sm">
+                <h4 class="font-bold text-md text-yellow-800 mb-2">二級保養 (醫工組或廠商負責)</h4>
+                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+                    <li>含保固期保養、基礎保養。</li>
+                    <li>依原廠技術手冊建議項目及品質規範做點檢與儀器功能保養。</li>
+                </ul>
+            </div>
+            <div class="bg-red-50 p-4 rounded-lg shadow-sm">
+                <h4 class="font-bold text-md text-red-800 mb-2">三級保養 (儀器合約廠商或醫工組)</h4>
+                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+                    <li>含合約保養、進階保養。</li>
+                    <li>依原廠技術手冊進行技術性點檢、更換保養或預防性套件 (Kit) 及校正。</li>
+                </ul>
+            </div>
+        </div>
+        <p class="text-gray-700 text-sm mt-4 text-center">
+            儀器設備依品質與風險參數分級分類。儀器保養記錄可自資訊系統或自儀器上 QR Code 掃描查詢。
+        </p>
+    </div>
+
+    <div class="infographic-card bg-gradient-to-br from-blue-50 to-blue-100">
+        <h2 class="infographic-section-title">4.6 醫療品質與病人安全管理實務</h2>
+        <p class="text-gray-700 mb-4 text-center">奇美醫院致力於提升醫療品質與病人安全，透過多項管理機制確保醫療服務的卓越性。</p>
+        <span class="icon-large">✅</span>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-purple-50 p-4 rounded-lg shadow-sm">
+                <h4 class="font-bold text-md text-purple-800 mb-2">品質監測與異常處理</h4>
+                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+                    <li>病人安全事件通報 (捷安報)：鼓勵醫護人員主動通報所有醫療不良事件，並了解通報處理機制。</li>
+                    <li>Critical Alert：對於危急值（檢驗5項、影像報告4項）等高風險醫療數據，須在30分鐘內完成處理與回覆，並熟悉傳呼與處理機制。</li>
+                    <li>品質指標監測：了解單位品質監測項目（如持續性監測指標、TCPI、THIS），並定期檢視相關統計、分析及檢討報告。</li>
+                    <li>異常事件處理：熟悉醫療不良事件的處理機制（如 RCA 根本原因分析、FMEA 失效模式與效應分析），並參與相關案例的討論與分享。</li>
+                </ul>
+            </div>
+            <div class="bg-yellow-50 p-4 rounded-lg shadow-sm">
+                <h4 class="font-bold text-md text-yellow-800 mb-2">倫理法律與品質會議</h4>
+                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+                    <li>倫理諮詢機制：若遇醫療倫理困境，可尋求倫理諮詢機制或醫學倫理委員會的協助。</li>
+                    <li>品質會議：積極參與各類品質會議，如醫療照護品質會議（併發症/死亡會議）、臨床服務會議（癌症診療、手術麻醉、多重共病），學習實證醫學應用，並促進跨領域/跨專科聯合討論。</li>
+                    <li>品質成果發表：了解醫院在醫品病安方面的對外發表與分享成果。</li>
+                </ul>
+            </div>
+            <div class="bg-red-50 p-4 rounded-lg shadow-sm">
+                <h4 class="font-bold text-md text-red-800 mb-2">安全環境與應變</h4>
+                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+                    <li>醫院安全管理：了解探病/陪病、夜間出入口、門禁時間及出入規範等醫院安全管理措施。</li>
+                    <li>工作場所安全：熟悉工作場所的安全設施（如保全監測、巡邏、警民連線）及用電安全管理（如延長線使用規範）。</li>
+                    <li>設施設備維護：了解重要機電、氣體維生設備和存放易燃物品空間的門禁管理，並確保公共場所安全設施（如公廁緊急求救鈴）的可用性。</li>
+                    <li>消防安全：熟悉全院火災危機預防及緊急應變管理程序書。</li>
+                    <li>緊急災害應變：了解醫院的緊急災害應變計畫及作業程序，並積極參與演練。</li>
+                    <li>員工安全：了解暴力事件管理、通報、防範及教育，確保醫事人員執行醫療業務時的安全。</li>
+                </ul>
+            </div>
+            <div class="bg-blue-50 p-4 rounded-lg shadow-sm">
+                <h4 class="font-bold text-md text-blue-800 mb-2">持續改善與文件管理</h4>
+                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+                    <li>PDCA 循環：積極參與單位品質改善重點及推動的改善活動，運用 PDCA 循環持續提升醫療品質。</li>
+                    <li>SOP 文件：了解醫院各類標準化文件 (SOP) 的定期審查頻率，並遵循其規範。</li>
+                    <li>單位簡介：熟悉單位特性、組織與人力配置、服務量及優良事項等基本概況。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="infographic-card bg-gradient-to-br from-green-50 to-green-100">
+        <h2 class="infographic-section-title">4.7 感染管制與預防</h2>
+        <p class="text-gray-700 mb-4 text-center">感染管制是病人安全的重要防線，每位醫師都應嚴格遵守相關規範。</p>
+        <span class="icon-large">🦠</span>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-purple-50 p-4 rounded-lg shadow-sm">
+                <h4 class="font-bold text-md text-purple-800 mb-2">感管組織與監測</h4>
+                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+                    <li>感管會議機制：了解感染管制委員會的組織章程、成員（含流病專業人員）、會議紀錄及年度工作計畫。</li>
+                    <li>感管人力與手冊：熟悉醫院的感管人力配置，並詳閱感控手冊，了解相關感染管制措施及定期修訂內容。</li>
+                    <li>醫療照護相關感染監測：定期檢視感染分析報表，並參與手部衛生或組合式照護等感染管制措施的遵從性稽核評估，共同推動改善方案。</li>
+                    <li>CDC 與臨床知悉：掌握疾病管制署 (CDC) 的最新指引，並確保臨床工作人員知悉並落實執行。</li>
+                </ul>
+            </div>
+            <div class="bg-yellow-50 p-4 rounded-lg shadow-sm">
+                <h4 class="font-bold text-md text-yellow-800 mb-2">新興傳染病與隔離</h4>
+                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+                    <li>新興傳染病應變：熟悉新興傳染病及群聚/群突發感染的應變計畫、處理 SOP 及調查處理報告，並積極參與通報與檢討改善。</li>
+                    <li>隔離動線與 PPE：了解隔離病人的辨識與處理（含負壓區、新興傳染疫情處理、隔離措施/動線），並熟悉個人防護裝備 (PPE) 的正確穿脫與使用時機。</li>
+                    <li>多重抗藥性菌種：了解多重抗藥性微生物的隔離管理政策及作業流程，並掌握其相關性、通報及自動化監測。</li>
+                    <li>傳染病病人處理流程及運送動線：熟悉傳染病病人的處理流程、運送動線及相關管理程序書。</li>
+                </ul>
+            </div>
+            <div class="bg-red-50 p-4 rounded-lg shadow-sm">
+                <h4 class="font-bold text-md text-red-800 mb-2">抗生素管理與清潔消毒</h4>
+                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+                    <li>抗生素管理計畫：了解醫院的抗生素管理計畫書，包括執行方式、人力、資源、成效評估。</li>
+                    <li>抗生素管理小組：了解抗生素管理小組的成員名單、團隊合作模式、出席紀錄及會議紀錄。</li>
+                    <li>抗生素用藥管制：熟悉抗生素用藥管制措施，包括使用量監測、抗藥性圖譜統計報告與改善回饋紀錄，並了解實驗室品管紀錄。</li>
+                    <li>清潔消毒滅菌：確實執行醫材、內視鏡、肺功能等醫療器械的清潔、消毒、滅菌，並遵循環境清潔 SOP、查檢表及教育訓練。</li>
+                    <li>供應事宜：了解設備的檢點表、保養維修紀錄、監測分析報告及故障處理，並確保人員知悉 SOP、指標意義及處理異常情況。</li>
+                    <li>區隔管理：注意供應室、儲藏室的溫度及濕度紀錄，並管理過期物品。</li>
+                    <li>滅菌監測：了解消毒滅菌監測結果（含生物、化學、抽真空監測）與審核紀錄。</li>
+                    <li>外包業務管理：熟悉外包業務（含租賃手術器械）的管理辦法及品質監控稽查與紀錄。</li>
+                </ul>
+            </div>
+            <div class="bg-blue-50 p-4 rounded-lg shadow-sm">
+                <h4 class="font-bold text-md text-blue-800 mb-2">職業暴露與安全注射</h4>
+                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+                    <li>暴露處理：熟悉暴露於血/體液及尖銳物品扎傷的作業流程和處理紀錄，並積極參與預防措施的 PDCA 循環。</li>
+                    <li>安全注射：落實安全注射原則。</li>
+                    <li>員工保護：了解員工接種疫苗、體溫監測、X光檢查等保護措施，並參與相關監測、稽核、資訊與成效評估。</li>
+                    <li>員工及工作環境安全通報：了解員工檢疫登錄、傳染病通報、針扎事件通報系統。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
