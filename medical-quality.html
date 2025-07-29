@@ -56,9 +56,10 @@
 
         .section-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 25px;
             margin-bottom: 30px;
+            /* 手機版：單欄 */
+            grid-template-columns: 1fr;
         }
 
         .section-card {
@@ -171,7 +172,7 @@
         }
 
         .care-step .step-emoji {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             display: block;
             margin-bottom: 10px;
         }
@@ -224,9 +225,10 @@
 
         .bundle-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 15px;
             margin-top: 15px;
+            /* 手機版：單欄 */
+            grid-template-columns: 1fr;
         }
 
         .bundle-item {
@@ -306,7 +308,7 @@
             }
             
             .section-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
             }
             
             .header h1 {
@@ -319,7 +321,7 @@
     <div class="container">
         <div class="header">
             <h1>醫療品質篇</h1>
-            <img src="Logo.png" alt="奇美醫院Logo" class="w-16 h-16 mx-auto mb-4">
+            <img src="Logo.png" alt="奇美醫院Logo" class="mx-auto mb-4" style="height: calc(3 * 1.8rem); width: auto;">
             <div class="motto">人本、創新、卓越</div>
             <div class="description">
                 透過指標監測、事件通報、臨床稽核等，醫院持續提升醫療品質，打造「以病人為中心，以同仁為優先」的醫療環境，提供有效、即時、安全、公平及有效率的醫療照護。藉由強化管理階層與第一線同仁的雙向溝通，我們希望從同仁的需求出發，營造「以人為本」的工作環境，更以推動智慧醫療、優化臨床工作流程、提供心理支持等，持續提升單位團隊合作及安全風氣，打造百年樹人的基業。
@@ -693,6 +695,6 @@
                 </div>
                     <div class="detail-content">
                     <div class="highlight-box">
-                        <h3>🤗歡迎您一起來🤗</h3>
+                        <h3><text-align: center>🤗歡迎您一起來🤗</h3>
                         <p>歡迎各位醫師參與院內之品質管理活動，不儘可以獲得院內學分、科部外績效，拿到晉升備任主治醫師的入門票，還能為團隊爭取一份榮耀。更重要的是，我們可以共同守護醫療品質及安全，也讓我們可以再更安心的場域裡工作生活。</p>
                 </div>
