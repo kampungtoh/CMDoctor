@@ -1,249 +1,717 @@
-
+</div><!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>醫療品質篇</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>醫療品質～</title>
     <style>
-        /* 這些樣式需要複製到每個獨立的內容頁面中，以確保顯示一致性 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #ffffff; /* Changed to white */
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
         }
-        .infographic-card {
-            background-color: #ffffff;
-            border-radius: 1.5rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            border: 1px solid #e2e8f0;
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
-        .infographic-section-title {
+
+        .header {
+            text-align: center;
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .header .motto {
             font-size: 1.5rem;
-            font-weight: 700;
-            color: #1e40af;
-            margin-bottom: 1rem;
-            text-align: center;
+            color: #e74c3c;
+            font-weight: bold;
+            margin-bottom: 15px;
         }
-        .icon-large {
-            font-size: 4rem;
-            line-height: 1;
+
+        .header .description {
+            color: #7f8c8d;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .section-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .section-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #3498db, #2ecc71);
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .section-title .emoji {
+            font-size: 1.8rem;
+            margin-right: 10px;
+        }
+
+        .section-title .title-text {
+            flex-basis: 100%;
+            margin-top: 5px;
+        }
+
+        .detail-content {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #ecf0f1;
+        }
+
+        .bullet-point {
+            margin: 8px 0;
+            padding: 8px 12px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            transition: background 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .bullet-point:hover {
+            background: #e3f2fd;
+        }
+
+        .bullet-point .emoji {
+            margin-right: 8px;
+        }
+
+        .bullet-point strong {
             display: block;
-            margin: 0 auto 0.5rem; /* Centering the icon */
+            margin-bottom: 3px;
         }
-        .list-center-items li {
+
+        .highlight-box {
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .highlight-box h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .care-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .care-step {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
             text-align: center;
-            list-style-position: inside; /* Ensures the bullet is inside the centered text */
+            border: 2px solid #e9ecef;
+            transition: all 0.3s ease;
         }
-        /* Style for sub-section icons */
-        .sub-section-icon {
-            font-size: 2.5rem; /* Smaller icon for sub-sections */
-            line-height: 1;
+
+        .care-step:hover {
+            border-color: #3498db;
+            background: #e3f2fd;
+        }
+
+        .care-step .step-emoji {
+            font-size: 2rem;
             display: block;
-            margin: 0 auto 0.5rem;
-            color: #3b82f6; /* Blue color for emphasis */
+            margin-bottom: 10px;
         }
-        .sub-section-title {
-            font-size: 1.25rem; /* text-xl */
-            font-weight: 600; /* font-semibold */
-            color: #1f2937; /* text-gray-900 */
+
+        .emergency-codes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .emergency-code {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 10px;
+            padding: 15px;
             text-align: center;
-            margin-bottom: 1rem;
+            transition: all 0.3s ease;
         }
-        .sub-section-content ul {
-            padding-left: 1.5rem; /* Indent for list items */
+
+        .emergency-code:hover {
+            background: #ffc107;
+            color: white;
+            transform: scale(1.05);
         }
-        .sub-section-content li {
-            margin-bottom: 0.5rem;
+
+        .expand-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .expand-btn:hover {
+            background: #2980b9;
+        }
+
+        .bundle-care {
+            background: linear-gradient(135deg, #fd79a8, #e84393);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        .bundle-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .bundle-item {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .interactive-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin: 5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .interactive-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .floating-nav {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            border-radius: 30px;
+            padding: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        .nav-item {
+            display: block;
+            padding: 10px;
+            margin: 5px 0;
+            background: #f8f9fa;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        .nav-item:hover {
+            background: #3498db;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .floating-nav {
+                display: none;
+            }
+            
+            .section-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
-<body class="p-4">
-    <div class="infographic-card bg-gradient-to-br from-red-50 to-red-100">
-        <h2 class="infographic-section-title">四、醫療品質篇：以病人為中心，持續改善</h2>
-        <span class="icon-large">🛡️</span>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mt-6">
-            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
-                <span class="sub-section-icon">📈</span>
-                <h3 class="sub-section-title">4.1 品質指標</h3>
-                <ul class="list-disc list-inside text-gray-700 space-y-1">
-                    <li>醫療品質指標：感染率、死亡率、再住院率等。</li>
-                    <li>病人安全指標：藥物不良反應、跌倒事件、壓瘡發生率等。</li>
-                </ul>
-            </div>
-
-            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
-                <span class="sub-section-icon">⚙️</span>
-                <h3 class="sub-section-title">4.2 品質改善工具</h3>
-                <ul class="list-disc list-inside text-gray-700 space-y-1">
-                    <li>PDCA循環：Plan-Do-Check-Act，持續改善醫療品質。</li>
-                    <li>根本原因分析：Root Cause Analysis，找出問題根本原因。</li>
-                    <li>失效模式與效應分析：Failure Mode and Effects Analysis，預防潛在風險。</li>
-                </ul>
-            </div>
-
-            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
-                <span class="sub-section-icon">🤝</span>
-                <h3 class="sub-section-title">4.3 品質安全文化</h3>
-                <ul class="list-disc list-inside text-gray-700 space-y-1">
-                    <li>鼓勵通報：鼓勵醫護人員通報錯誤和疏失，共同學習。</li>
-                    <li>不責備文化：找出系統性問題，而非責備犯錯者。</li>
-                    <li>團隊合作：共同提升醫療品質和病人安全。</li>
-                </ul>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>醫療品質篇</h1>
+            <img src="logo.png" alt="奇美醫院Logo" class="w-24 h-24 mx-auto mb-4">
+            <div class="motto">人本、創新、卓越</div>
+            <div class="description">
+                透過指標監測、事件通報、臨床稽核等，醫院持續提升醫療照護品質，打造「以病人為中心，以同仁為優先」的醫療環境，提供有效、即時、安全、公平及有效率的醫療照護。此外，藉由強化管理階層與第一線同仁的雙向溝通，我們亦希望從同仁的需求出發，營造「以人為本」的工作環境，更藉由推動智慧醫療、優化臨床工作流程、提供心理支持等，持續提升單位團隊合作及安全風氣，打造百年樹人的基業。
             </div>
         </div>
 
-        <h3 class="text-lg font-semibold mb-2 text-gray-800 mt-6 text-center">4.4 災害呼叫代號與應變</h3>
-        <p class="text-gray-700 mb-4 text-center">熟悉醫院的災害呼叫代號與應變流程，是確保病人與自身安全的重要一環。</p>
-        <span class="icon-large">🚨</span>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="bg-blue-50 p-4 rounded-lg shadow-sm">
-                <h4 class="font-bold text-md text-blue-800 mb-2">災害呼叫代號</h4>
-                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
-                    <li>333：大量傷患</li>
-                    <li>黃色333：毒化災大量傷患</li>
-                    <li>999：急救事件</li>
-                    <li>兒童999：兒童 (16歲以下) 急救事件</li>
-                    <li>全院綠色：火災</li>
-                </ul>
-            </div>
-            <div class="bg-green-50 p-4 rounded-lg shadow-sm">
-                <h4 class="font-bold text-md text-green-800 mb-2">院內啟動急救事件 999 之人力支援團隊</h4>
-                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
-                    <li>上班時段醫師：負責照護之主治醫師、住院醫師、專科護理師、該科總醫師 (Fellow)。</li>
-                    <li>值班時段醫師：該值班線別醫師及值班總醫師。</li>
-                    <li>護理師：原則上、下、左、右之樓層護理站支援護理人力各 1 名，由發生單位當班主管或值班護理長協助調度。</li>
-                    <li>兒童999：急診及 4AI 團隊支援，4AI 團隊需支援 1 位醫師與 1 位護理師，並攜帶兒童急救設備。</li>
-                </ul>
-            </div>
-        </div>
+        <div class="section-grid">
+            <!-- 醫病溝通 -->
+            <div class="section-card">
+                <div class="section-title">
+                    <span class="emoji">❤️</span>
+                    <div class="title-text">醫病溝通<br><small style="font-size: 0.8em; color: #7f8c8d;">關懷與信任的橋樑</small></div>
+                </div>
+                
+                <div class="detail-content">
+                    <div class="bullet-point">
+                        <span class="emoji">❤️</span>
+                        <strong>核心是關懷</strong>
+                        溝通不只傳遞資訊，更是傳遞心意。
+                    </div>
+                    
+                    <div class="highlight-box">
+                        <h3>🗣️ C-I-CARE 五步驟</h3>
+                    <div class="care-steps">
+                            <div class="care-step">
+                                <span class="step-emoji">👋</span>
+                                <strong>C</strong>onnect<br><small>眼神交流、適當稱呼</small>
+                            </div>
+                            <div class="care-step">
+                                <span class="step-emoji">👨‍⚕️</span>
+                                <strong>I</strong>ntroduce<br><small>介紹姓名、職別、角色</small>
+                            </div>
+                            <div class="care-step">
+                                <span class="step-emoji">💬</span>
+                                <strong>C</strong>ommunicate<br><small>處置說明、可能影響</small>
+                            </div>
+                            <div class="care-step">
+                                <span class="step-emoji">❓</span>
+                                <strong>A</strong>sk/Respond<br><small>詢問疑問、即時回應</small>
+                            </div>
+                            <div class="care-step">
+                                <span class="step-emoji">👋</span>
+                                <strong>E</strong>xit<br><small>說明後續、告知下次再訪時間</small>
+                            </div>
+                        </div>
+                    </div>
 
-        <h3 class="text-lg font-semibold mb-2 text-gray-800 mt-6 text-center">4.5 儀器保養作業原則</h3>
-        <p class="text-gray-700 mb-4 text-center">確保醫療儀器正常運作是病人安全的基石，請務必了解儀器保養的相關原則。</p>
-        <span class="icon-large">🛠️</span>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="bg-purple-50 p-4 rounded-lg shadow-sm">
-                <h4 class="font-bold text-md text-purple-800 mb-2">一級保養 (使用部門負責)</h4>
-                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
-                    <li>定期清潔消毒及功能檢視 (一般保養/每月、加強保養/每年)。</li>
-                    <li>人員儀器使用前應執行重點檢測，使用後進行必要的一級保養。</li>
-                </ul>
+                    <div class="bullet-point">
+                        <span class="emoji">🤝</span>
+                        <strong>醫病共享決策 (SDM)</strong>
+                        讓病人參與醫療決定，一起面對。
+                    </div>
+                    
+                    <div class="bullet-point">
+                        <span class="emoji">🤗</span>
+                        <strong>同理心</strong>
+                        理解焦慮，將「等待」轉為「正在處理」。
+                    </div>
+                    
+                    <div class="bullet-point">
+                        <span class="emoji">✨</span>
+                        <strong>溫度與態度</strong>
+                        你的「溫度」和「態度」，是建立信任的關鍵。
+                    </div>
+                    
+                    <div class="bullet-point">
+                        <span class="emoji">⚖️</span>
+                        <strong>醫預法</strong>
+                        醫療事故預防法規，提供支持與關懷，將爭議往前處理。
+                    </div>
+                </div>
             </div>
-            <div class="bg-yellow-50 p-4 rounded-lg shadow-sm">
-                <h4 class="font-bold text-md text-yellow-800 mb-2">二級保養 (醫工組或廠商負責)</h4>
-                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
-                    <li>含保固期保養、基礎保養。</li>
-                    <li>依原廠技術手冊建議項目及品質規範做點檢與儀器功能保養。</li>
-                </ul>
-            </div>
-            <div class="bg-red-50 p-4 rounded-lg shadow-sm">
-                <h4 class="font-bold text-md text-red-800 mb-2">三級保養 (儀器合約廠商或醫工組)</h4>
-                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
-                    <li>含合約保養、進階保養。</li>
-                    <li>依原廠技術手冊進行技術性點檢、更換保養或預防性套件 (Kit) 及校正。</li>
-                </ul>
-            </div>
-        </div>
-        <p class="text-gray-700 text-sm mt-4 text-center">
-            儀器設備依品質與風險參數分級分類。儀器保養記錄可自資訊系統或自儀器上 QR Code 掃描查詢。
-        </p>
-    </div>
 
-    <div class="infographic-card bg-gradient-to-br from-blue-50 to-blue-100">
-        <h2 class="infographic-section-title">4.6 醫療品質與病人安全管理實務</h2>
-        <p class="text-gray-700 mb-4 text-center">奇美醫院致力於提升醫療品質與病人安全，透過多項管理機制確保醫療服務的卓越性。</p>
-        <span class="icon-large">✅</span>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="bg-purple-50 p-4 rounded-lg shadow-sm">
-                <h4 class="font-bold text-md text-purple-800 mb-2">品質監測與異常處理</h4>
-                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
-                    <li>病人安全事件通報 (捷安報)：鼓勵醫護人員主動通報所有醫療不良事件，並了解通報處理機制。</li>
-                    <li>Critical Alert：對於危急值（檢驗5項、影像報告4項）等高風險醫療數據，須在30分鐘內完成處理與回覆，並熟悉傳呼與處理機制。</li>
-                    <li>品質指標監測：了解單位品質監測項目（如持續性監測指標、TCPI、THIS），並定期檢視相關統計、分析及檢討報告。</li>
-                    <li>異常事件處理：熟悉醫療不良事件的處理機制（如 RCA 根本原因分析、FMEA 失效模式與效應分析），並參與相關案例的討論與分享。</li>
-                </ul>
+            <!-- 團隊溝通 -->
+            <div class="section-card">
+                <div class="section-title">
+                    <span class="emoji">👥</span>
+                    <div class="title-text">團隊溝通<br><small style="font-size: 0.8em; color: #7f8c8d;">溝通是安全的基石</small></div>
+                </div>
+                
+                <div class="detail-content">
+                    <div class="bullet-point">
+                        <span class="emoji">🔗</span>
+                        <strong>團隊合作</strong>
+                        有效溝通是避免錯誤的關鍵。
+                    </div>
+                    
+                    <div class="bullet-point">
+                        <span class="emoji">🔄</span>
+                        <strong>TRM (團隊資源管理)</strong>
+                        奇美醫院推動的框架，強調領導、溝通、守望、協助，讓團隊更強大。
+                    </div>
+                    
+                    <div class="bullet-point">
+                        <span class="emoji">📝</span>
+                        <strong>ISBAR 溝通模式</strong>
+                        交班、報告病況時，運用結構化溝通，條理清晰。
+                    </div>
+                    
+                    <div class="bullet-point">
+                        <span class="emoji">📣</span>
+                        <strong>Check-Back & Call-Out</strong>
+                        重複確認訊息，大聲通報危急情況，確保無誤。
+                    </div>
+                    
+                    <div class="bullet-point">
+                        <span class="emoji">🆘</span>
+                        <strong>5888 團隊會議</strong>
+                        需要協助時，主動求援，團隊是你的堅實後盾。
+                    </div>
+                    
+                    <div class="highlight-box">
+                        <h3>🗣️ 重要提醒</h3>
+                        <p>新進醫師若有「不懂、不敢問、不敢說、不敢求助」的情況，請務必開口，因為這是潛在風險。說出來，團隊才能幫你。</p>
+                    </div>
+                </div>
             </div>
-            <div class="bg-yellow-50 p-4 rounded-lg shadow-sm">
-                <h4 class="font-bold text-md text-yellow-800 mb-2">倫理法律與品質會議</h4>
-                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
-                    <li>倫理諮詢機制：若遇醫療倫理困境，可尋求倫理諮詢機制或醫學倫理委員會的協助。</li>
-                    <li>品質會議：積極參與各類品質會議，如醫療照護品質會議（併發症/死亡會議）、臨床服務會議（癌症診療、手術麻醉、多重共病），學習實證醫學應用，並促進跨領域/跨專科聯合討論。</li>
-                    <li>品質成果發表：了解醫院在醫品病安方面的對外發表與分享成果。</li>
-                </ul>
-            </div>
-            <div class="bg-red-50 p-4 rounded-lg shadow-sm">
-                <h4 class="font-bold text-md text-red-800 mb-2">安全環境與應變</h4>
-                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
-                    <li>醫院安全管理：了解探病/陪病、夜間出入口、門禁時間及出入規範等醫院安全管理措施。</li>
-                    <li>工作場所安全：熟悉工作場所的安全設施（如保全監測、巡邏、警民連線）及用電安全管理（如延長線使用規範）。</li>
-                    <li>設施設備維護：了解重要機電、氣體維生設備和存放易燃物品空間的門禁管理，並確保公共場所安全設施（如公廁緊急求救鈴）的可用性。</li>
-                    <li>消防安全：熟悉全院火災危機預防及緊急應變管理程序書。</li>
-                    <li>緊急災害應變：了解醫院的緊急災害應變計畫及作業程序，並積極參與演練。</li>
-                    <li>員工安全：了解暴力事件管理、通報、防範及教育，確保醫事人員執行醫療業務時的安全。</li>
-                </ul>
-            </div>
-            <div class="bg-blue-50 p-4 rounded-lg shadow-sm">
-                <h4 class="font-bold text-md text-blue-800 mb-2">持續改善與文件管理</h4>
-                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
-                    <li>PDCA 循環：積極參與單位品質改善重點及推動的改善活動，運用 PDCA 循環持續提升醫療品質。</li>
-                    <li>SOP 文件：了解醫院各類標準化文件 (SOP) 的定期審查頻率，並遵循其規範。</li>
-                    <li>單位簡介：熟悉單位特性、組織與人力配置、服務量及優良事項等基本概況。</li>
-                </ul>
-            </div>
-        </div>
-    </div>
 
-    <div class="infographic-card bg-gradient-to-br from-green-50 to-green-100">
-        <h2 class="infographic-section-title">4.7 感染管制與預防</h2>
-        <p class="text-gray-700 mb-4 text-center">感染管制是病人安全的重要防線，每位醫師都應嚴格遵守相關規範。</p>
-        <span class="icon-large">🦠</span>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="bg-purple-50 p-4 rounded-lg shadow-sm">
-                <h4 class="font-bold text-md text-purple-800 mb-2">感管組織與監測</h4>
-                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
-                    <li>感管會議機制：了解感染管制委員會的組織章程、成員（含流病專業人員）、會議紀錄及年度工作計畫。</li>
-                    <li>感管人力與手冊：熟悉醫院的感管人力配置，並詳閱感控手冊，了解相關感染管制措施及定期修訂內容。</li>
-                    <li>醫療照護相關感染監測：定期檢視感染分析報表，並參與手部衛生或組合式照護等感染管制措施的遵從性稽核評估，共同推動改善方案。</li>
-                    <li>CDC 與臨床知悉：掌握疾病管制署 (CDC) 的最新指引，並確保臨床工作人員知悉並落實執行。</li>
-                </ul>
+            <!-- 醫療事件通報 -->
+            <div class="section-card">
+                <div class="section-title">
+                    <span class="emoji">📢</span>
+                    <div class="title-text">醫療事件通報<br><small style="font-size: 0.8em; color: #7f8c8d;">從錯誤中學習</small></div>
+                </div>
+                
+                <div class="detail-content">
+                    <div class="bullet-point">
+                        <span class="emoji">🚨</span>
+                        <strong>捷安報</strong>
+                        醫院的專屬通報系統，鼓勵你主動通報任何醫療不良事件。
+                    </div>
+                    
+                    <div class="bullet-point">
+                        <span class="emoji">🌐</span>
+                        <strong>TPR (全國病人安全通報系統)</strong>
+                        全國性的通報平台。
+                    </div>
+                    
+                    <div class="bullet-point">
+                        <span class="emoji">🔒</span>
+                        <strong>通報保障</strong>
+                        通報是為了學習，不是責備。醫院保障匿名、無懲罰，鼓勵你說出來。
+                    </div>
+                    
+                    <div class="bullet-point">
+                        <span class="emoji">📈</span>
+                        <strong>從錯誤中成長</strong>
+                        分析事件，找出系統問題，避免重蹈覆轍。
+                    </div>
+                    
+                    <div class="bullet-point">
+                        <span class="emoji">✅</span>
+                        <strong>養成好習慣</strong>
+                        系統警示別急著關，文件仔細看，每次操作都留下記錄，確保安全。
+                    </div>
+                </div>
             </div>
-            <div class="bg-yellow-50 p-4 rounded-lg shadow-sm">
-                <h4 class="font-bold text-md text-yellow-800 mb-2">新興傳染病與隔離</h4>
-                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
-                    <li>新興傳染病應變：熟悉新興傳染病及群聚/群突發感染的應變計畫、處理 SOP 及調查處理報告，並積極參與通報與檢討改善。</li>
-                    <li>隔離動線與 PPE：了解隔離病人的辨識與處理（含負壓區、新興傳染疫情處理、隔離措施/動線），並熟悉個人防護裝備 (PPE) 的正確穿脫與使用時機。</li>
-                    <li>多重抗藥性菌種：了解多重抗藥性微生物的隔離管理政策及作業流程，並掌握其相關性、通報及自動化監測。</li>
-                    <li>傳染病病人處理流程及運送動線：熟悉傳染病病人的處理流程、運送動線及相關管理程序書。</li>
-                </ul>
-            </div>
-            <div class="bg-red-50 p-4 rounded-lg shadow-sm">
-                <h4 class="font-bold text-md text-red-800 mb-2">抗生素管理與清潔消毒</h4>
-                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
-                    <li>抗生素管理計畫：了解醫院的抗生素管理計畫書，包括執行方式、人力、資源、成效評估。</li>
-                    <li>抗生素管理小組：了解抗生素管理小組的成員名單、團隊合作模式、出席紀錄及會議紀錄。</li>
-                    <li>抗生素用藥管制：熟悉抗生素用藥管制措施，包括使用量監測、抗藥性圖譜統計報告與改善回饋紀錄，並了解實驗室品管紀錄。</li>
-                    <li>清潔消毒滅菌：確實執行醫材、內視鏡、肺功能等醫療器械的清潔、消毒、滅菌，並遵循環境清潔 SOP、查檢表及教育訓練。</li>
-                    <li>供應事宜：了解設備的檢點表、保養維修紀錄、監測分析報告及故障處理，並確保人員知悉 SOP、指標意義及處理異常情況。</li>
-                    <li>區隔管理：注意供應室、儲藏室的溫度及濕度紀錄，並管理過期物品。</li>
-                    <li>滅菌監測：了解消毒滅菌監測結果（含生物、化學、抽真空監測）與審核紀錄。</li>
-                    <li>外包業務管理：熟悉外包業務（含租賃手術器械）的管理辦法及品質監控稽查與紀錄。</li>
-                </ul>
-            </div>
-            <div class="bg-blue-50 p-4 rounded-lg shadow-sm">
-                <h4 class="font-bold text-md text-blue-800 mb-2">職業暴露與安全注射</h4>
-                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
-                    <li>暴露處理：熟悉暴露於血/體液及尖銳物品扎傷的作業流程和處理紀錄，並積極參與預防措施的 PDCA 循環。</li>
-                    <li>安全注射：落實安全注射原則。</li>
-                    <li>員工保護：了解員工接種疫苗、體溫監測、X光檢查等保護措施，並參與相關監測、稽核、資訊與成效評估。</li>
-                    <li>員工及工作環境安全通報：了解員工檢疫登錄、傳染病通報、針扎事件通報系統。</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
 
+            <!-- 發生醫療事故/爭議 -->
+            <div class="section-card">
+                <div class="section-title">
+                    <span class="emoji">🧠</span>
+                    <div class="title-text">發生醫療事故 / 爭議，怎麼辦？</div>
+                </div>
+                
+                <div class="detail-content">
+                    <div class="highlight-box">
+                        <h3>✅ 何謂病人安全？</h3>
+                        <p>避免、預防及改善健康照護過程中，所產生之不良反應與傷害。</p>
+                    </div>
+
+                    <div class="bullet-point">
+                        <span class="emoji">💡</span>
+                        <strong>學習與改善</strong>
+                        每個事件都是學習機會，別只問「誰的錯？」，要問「發生了什麼？」。
+                    </div>
+                    
+                    <div class="bullet-point">
+                        <span class="emoji">🧊</span>
+                        <strong>冰山理論</strong>
+                        了解警訊、不良、無傷害、跡近錯失事件。鼓勵通報跡近錯失，因為「沒說出來，就沒人知道」。
+                    </div>
+                    
+                    <div class="bullet-point">
+                        <span class="emoji">🤝</span>
+                        <strong>不責備文化</strong>
+                        處理失誤是找出系統問題，而非懲罰個人，避免重蹈覆轍。
+                    </div>
+                    
+                    <div class="bullet-point">
+                        <span class="emoji">🎯</span>
+                        <strong>務實與態度</strong>
+                        SOP 是基礎，病人安全是態度、習慣、文化。
+                    </div>
+                    
+                    <div class="bullet-point">
+                        <span class="emoji">😴</span>
+                        <strong>疲勞管理</strong>
+                        疲勞會影響判斷力，務必重視休息，降低錯誤風險。
+                    </div>
+                </div>
+            </div>
+
+            <!-- 全院廣播呼叫代號 -->
+            <div class="section-card">
+                <div class="section-title">
+                    <span class="emoji">🚨</span>
+                    <div class="title-text">全院廣播呼叫代號</div>
+                </div>
+                
+                <div class="detail-content">
+                    <p style="margin-bottom: 15px; font-size: 0.9rem;">熟悉醫院的災害呼叫代號與應變流程，是確保病人與自身安全的重要一環。</p>
+                    
+                    <h4 style="margin: 15px 0; color: #e74c3c; font-size: 1.1rem;">災害呼叫代號</h4>
+                    <div class="emergency-codes">
+                        <div class="emergency-code">
+                            <div style="font-size: 1.5rem;">🚑</div>
+                            <strong>333</strong><br>大量傷患
+                        </div>
+                        <div class="emergency-code">
+                            <div style="font-size: 1.5rem;">☣️</div>
+                            <strong>黃色333</strong><br>毒化災大量傷患
+                        </div>
+                        <div class="emergency-code">
+                            <div style="font-size: 1.5rem;">⚡</div>
+                            <strong>999</strong><br>急救事件
+                        </div>
+                        <div class="emergency-code">
+                            <div style="font-size: 1.5rem;">👶</div>
+                            <strong>兒童999</strong><br>兒童急救事件
+                        </div>
+                        <div class="emergency-code">
+                            <div style="font-size: 1.5rem;">🔥</div>
+                            <strong>全院綠色</strong><br>火災
+                        </div>
+                    </div>
+
+                    <h4 style="margin: 15px 0; color: #e74c3c; font-size: 1.1rem;">院內急救事件 999 人力支援</h4>
+                    <div class="bullet-point">
+                        <span class="emoji">👨‍⚕️</span>
+                        <strong>上班時段醫師</strong>
+                        主治醫師、住院醫師、專科護理師、該科總醫師。
+                    </div>
+                    <div class="bullet-point">
+                        <span class="emoji">🌃</span>
+                        <strong>值班時段醫師</strong>
+                        該值班線別醫師及值班總醫師。
+                    </div>
+                    <div class="bullet-point">
+                        <span class="emoji">👩‍⚕️</span>
+                        <strong>護理師</strong>
+                        原則上、下、左、右樓層護理站支援各1名。
+                    </div>
+                    <div class="bullet-point">
+                        <span class="emoji">👧👦</span>
+                        <strong>兒童999</strong>
+                        急診及4AI團隊支援，需攜帶兒童急救設備。
+                    </div>
+                </div>
+            </div>
+
+           <!-- 感染管制與預防 -->
+            <div class="section-card">
+                <div class="section-title">
+                    <span class="emoji">🦠</span>
+                    <div class="title-text">感染管制與預防</div>
+                </div>
+                
+                <div class="detail-content">
+                    <p style="margin-bottom: 15px; font-size: 0.9rem;">感染管制是病人安全的重要防線，每位醫師都應嚴格遵守相關規範。</p>
+
+                    <h4 style="margin: 15px 0; color: #27ae60; font-size: 1.1rem;">日常感染預防：從你我做起</h4>
+                    <div class="bullet-point">
+                        <span class="emoji">🧼</span>
+                        <strong>洗手是第一道防線</strong>
+                        務必正確、頻繁洗手，保護自己與病人。
+                    </div>
+                    <div class="bullet-point">
+                        <span class="emoji">😷</span>
+                        <strong>隔離政策與防護裝備</strong>
+                        熟悉醫院隔離流程，正確穿脫個人防護裝備 (PPE)，保護自己與他人。
+                    </div>
+                    <div class="bullet-point">
+                        <span class="emoji">💊</span>
+                        <strong>抗生素的智慧使用</strong>
+                        了解抗生素管理計畫，合理開立，避免抗藥性產生。
+                    </div>
+                    <div class="bullet-point">
+                        <span class="emoji">🌡️</span>
+                        <strong>人員健康監測</strong>
+                        了解員工疫苗接種、體溫監測等保護措施。
+                    </div>
+                    <div class="bullet-point">
+                        <span class="emoji">🩸</span>
+                        <strong>針扎通報與處理</strong>
+                        若不慎發生針扎，立即依流程通報並處理，保護自身安全。
+                    </div>
+
+                    <div class="bundle-care">
+                        <h3>📦 Bundle Care 照護組合包</h3>
+                        <p style="margin-bottom: 15px; font-size: 0.9rem;">Bundle care是將多項具實證基礎的照護措施組合在一起，當作一個整體執行，重點是「全部執行」而非「部分執行」。</p>
+                        
+                        <div class="bundle-grid">
+                            <div class="bundle-item">
+                                <h4>🏥 CVC Bundle</h4>
+                                <p style="font-size: 0.85rem; margin-bottom: 10px;">中心靜脈導管感染預防組合包</p>
+                                <ul style="font-size: 0.8rem; padding-left: 15px; margin: 0;">
+                                    <li>手部衛生</li>
+                                    <li>最大無菌防護措施</li>
+                                    <li>使用chlorhexidine皮膚消毒</li>
+                                    <li>避免股靜脈置放</li>
+                                    <li>每日評估移除必要性</li>
+                                </ul>
+                            </div>
+                            <div class="bundle-item">
+                                <h4>🫁 VAP Bundle</h4>
+                                <p style="font-size: 0.85rem; margin-bottom: 10px;">呼吸器相關肺炎預防組合包</p>
+                                <ul style="font-size: 0.8rem; padding-left: 15px; margin: 0;">
+                                    <li>床頭抬高30-45度</li>
+                                    <li>每日中斷鎮靜劑評估</li>
+                                    <li>深靜脈血栓預防</li>
+                                    <li>胃潰瘍預防</li>
+                                    <li>每日評估脫離呼吸器可能性</li>
+                                    <li>口腔護理</li>
+                                </ul>
+                            </div>
+                            <div class="bundle-item">
+                                <h4>🚽 CAUTI Bundle</h4>
+                                <p style="font-size: 0.85rem; margin-bottom: 10px;">導尿管相關感染預防組合包</p>
+                                <ul style="font-size: 0.8rem; padding-left: 15px; margin: 0;">
+                                    <li>無菌技術置放</li>
+                                    <li>維持密閉引流系統</li>
+                                    <li>每日評估移除必要性</li>
+                                    <li>固定導管避免拉扯</li>
+                                    <li>會陰部清潔護理</li>
+                                </ul>
+                            </div>
+                            <div class="bundle-item">
+                                <h4>🔪 SSI Bundle</h4>
+                                <p style="font-size: 0.85rem; margin-bottom: 10px;">手術部位感染預防組合包</p>
+                                <ul style="font-size: 0.8rem; padding-left: 15px; margin: 0;">
+                                    <li>預防性抗生素適當使用</li>
+                                    <li>術前皮膚準備</li>
+                                    <li>血糖控制</li>
+                                    <li>體溫維持</li>
+                                    <li>手術部位毛髮處理</li>
+                                </ul>
+                            </div>
+                            <div class="bundle-item">
+                                <h4>🩸 CLABSI Bundle</h4>
+                                <p style="font-size: 0.85rem; margin-bottom: 10px;">中心導管血流感染預防組合包</p>
+                                <ul style="font-size: 0.8rem; padding-left: 15px; margin: 0;">
+                                    <li>手部衛生確實執行</li>
+                                    <li>中心導管護理</li>
+                                    <li>敷料更換技術</li>
+                                    <li>輸液接頭消毒</li>
+                                    <li>不必要導管移除</li>
+                                </ul>
+                            </div>
+                            <div class="bundle-item">
+                                <h4>🤲 Hand Hygiene Bundle</h4>
+                                <p style="font-size: 0.85rem; margin-bottom: 10px;">手部衛生組合包</p>
+                                <ul style="font-size: 0.8rem; padding-left: 15px; margin: 0;">
+                                    <li>接觸病人前洗手</li>
+                                    <li>執行清潔/無菌操作前</li>
+                                    <li>接觸體液風險後</li>
+                                    <li>接觸病人後</li>
+                                    <li>接觸病人周遭環境後</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px; margin-top: 15px;">
+                            <h4 style="margin-bottom: 10px; font-size: 1rem;">🎯 Bundle Care執行原則</h4>
+                            <ul style="font-size: 0.85rem; margin: 0; padding-left: 15px;">
+                                <li><strong>全部執行</strong>：所有措施必須100%執行，不可挑選</li>
+                                <li><strong>團隊責任</strong>：每位團隊成員都有監督責任</li>
+                                <li><strong>持續稽核</strong>：建立稽核機制確保合規性</li>
+                                <li><strong>定期檢討</strong>：根據成效調整和改善</li>
+                                <li><strong>教育訓練</strong>：確保所有人員了解執行標準</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h4 style="margin: 15px 0; color: #27ae60; font-size: 1.1rem;">特殊感染與環境管理</h4>
+                    <div class="bullet-point">
+                        <span class="emoji">🦠</span>
+                        <strong>新興傳染病應變</strong>
+                        熟悉醫院針對新興傳染病的應變計畫與處理 SOP。
+                    </div>
+                    <div class="bullet-point">
+                        <span class="emoji">🛡️</span>
+                        <strong>多重抗藥性菌種</strong>
+                        了解多重抗藥性微生物的隔離管理政策及自動化監測。
+                    </div>
+                </div>
