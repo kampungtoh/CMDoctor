@@ -1,1 +1,438 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>臨床篇</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* 這些樣式需要複製到每個獨立的內容頁面中，以確保顯示一致性 */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Background for the iframe content */
+        }
+        .infographic-card {
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #e2e8f0;
+        }
+        .infographic-section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .icon-large {
+            font-size: 4rem;
+            line-height: 1;
+            display: block;
+            margin: 0 auto 0.5rem; /* Centering the icon */
+        }
+        .list-center-items li {
+            text-align: center;
+            list-style-position: inside; /* Ensures the bullet is inside the centered text */
+        }
+        /* Style for sub-section icons */
+        .sub-section-icon {
+            font-size: 2.5rem; /* Smaller icon for sub-sections */
+            line-height: 1;
+            display: block;
+            margin: 0 auto 0.5rem;
+            text-align: center;
+            color: #3b82f6; /* Blue color for emphasis */
+        }
+        .sub-section-title {
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* font-semibold */
+            color: #1f2937; /* text-gray-900 */
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .sub-section-content ul {
+            padding-left: 1.5rem; /* Indent for list items */
+        }
+        .sub-section-content li {
+            margin-bottom: 0.5rem;
+        }
+        .SOP-img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto 1rem auto;
+        }
+              .highlight-box {
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
 
+        .highlight-box h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="p-4">
+    <div class="infographic-card bg-gradient-to-br from-blue-50 to-blue-100">
+        <h2 class="infographic-section-title">臨床篇：在刀光劍影中成長</h2>
+        <span class="icon-large text-center">⚕️</span>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mt-6">
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                <h3 class="sub-section-title">1. 值班生存法則</h3>
+              <span class="sub-section-icon">🌙</span>
+                <ul class="list-disc list-inside text-gray-700 space-y-1">
+                    <li>學長姐是你的神救援：遇疑難雜症，立即請教學長姐。</li>
+                    <li>善用醫院資源：熟悉資訊系統、檢驗流程、藥品查詢。</li>
+                    <li>保持清醒：咖啡/提神飲料要適量，確保專注。</li>
+                    <li>記錄一切：詳細記錄病人狀況、處置、醫囑。</li>
+                    <li>適時休息：再忙也要抽空休息，確保身心健康。</li>
+                    <li>交班要清楚：完整交代病人狀況、未完成事項。</li>
+                    <li>臨床作業手冊：不了解有應該怎麼處理，不擔心，各科部的臨床作業手冊 / 值班手冊都有寫！</li>
+                    <img src="SOP.jpg" alt="SOP" class="SOP-img">
+                </ul>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+              <h3 class="sub-section-title">2 病房巡診技巧</h3>  
+              <span class="sub-section-icon">🩺</span>
+                <ul class="list-disc list-inside text-gray-700 space-y-1">
+                    <li>事前準備：複習病歷，了解病人基本資料、病史。</li>
+                    <li>觀察入微：仔細觀察病人精神狀態、呼吸、膚色等。</li>
+                    <li>溝通技巧：耐心親切與病人/家屬溝通，解釋病情（請參考醫療品質篇 CICARE）。</li>
+                    <li>團隊合作：與護理師、藥師、營養師、治療師、社工師、心理師等各醫事職類密切協作。</li>
+                    <li>記錄重點：巡診後立即記錄狀況、醫囑變更。</li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+              <h3 class="sub-section-title">3 門診應對策略</h3>  
+              <span class="sub-section-icon">🧑‍⚕️</span>
+                <ul class="list-disc list-inside text-gray-700 space-y-1">
+                    <li>時間管理：高效問診、檢查、開藥。</li>
+                    <li>問診技巧：快速了解主訴、病史、相關資訊。</li>
+                    <li>診斷能力：提升判斷病情的能力。</li>
+                    <li>用藥知識：熟悉常用藥物適應症、副作用、交互作用。</li>
+                    <li>衛教宣導：宣導疾病預防、治療、照護知識。</li>
+                    <li>同理心：關懷病人，提供支持。</li>
+                    <li>同理心：關懷病人，提供支持。</li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+              <h3 class="sub-section-title">4 特殊情況處理</h3>  
+              <span class="sub-section-icon">⚠️</span>
+                <ul class="list-disc list-inside text-gray-700 space-y-1">
+                    <li>緊急事件：保持冷靜，立即採取適當處置。</li>
+                    <li>醫療爭議：保持理性，尋求醫院協助。</li>
+                    <li>病人投訴：虛心接受，積極改善。</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+            <h3 class="sub-section-title">5 病歷書寫與管理工作流程</h3>      
+            <span class="sub-section-icon">📄</span>
+                <ul class="list-disc list-inside text-gray-700 space-y-1">
+        <p class="text-gray-700 mb-4 text-center">病歷是醫療活動的完整記錄，正確且即時的書寫至關重要，不僅影響醫療品質，也關乎法律責任。奇美醫院對病歷書寫有明確規範，請務必熟悉並遵守。</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-purple-50 p-4 rounded-lg shadow-sm">
+                <h4 class="font-bold text-md text-purple-800 mb-2">步驟 1: 醫療行為執行與即時記錄</h4>
+                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+                    <li>所有醫療行為應於完成後進行記錄。</li>
+                    <li>確保記錄內容完整，涵蓋病人主訴、病史、理學檢查、診斷、治療計畫、醫囑、病程變化及處置。</li>
+                    <li>記錄內容應客觀，避免主觀判斷或情緒性字眼。</li>
+                    <li>字跡清晰，內容條理分明，避免模糊不清或塗改。</li>
+                    <li>確保所有資訊（如病人身份、日期、時間、劑量）準確無誤。</li>
+                </ul>
+            </div>
+            <div class="bg-yellow-50 p-4 rounded-lg shadow-sm">
+                <h4 class="font-bold text-md text-yellow-800 mb-2">步驟 2: 病歷內容要項 (SOAP)</h4>
+                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+                    <li>S (Subjective)：主觀資料，病人主訴、症狀描述。</li>
+                    <li>O (Objective)：客觀資料，理學檢查發現、檢驗檢查結果、生命徵象。</li>
+                    <li>A (Assessment)：評估，綜合主客觀資料後的診斷或問題評估。</li>
+                    <li>P (Plan)：計畫，治療、檢查、藥物、衛教等後續處理。</li>
+                    <li>病情解釋：應紀錄病情溝通之內容，並包含病人或家人之提問，以及解釋是否有了解相關內容。</li>
+                    <li>醫囑 (Orders)：所有醫囑應清晰、明確，包含藥物名稱、劑量、途徑、頻率、療程。</li>
+                    <li>病程記錄 (Progress Notes)：每日或依病人狀況變化頻繁記錄，反映病人進展與處置調整。</li>
+                    <li>週摘要記錄 (Weekly Summary Notes)：每週五或長假前一天要寫週摘要，並包括團隊照護之內容。</li>
+                </ul>
+            </div>
+            <div class="bg-red-50 p-4 rounded-lg shadow-sm">
+                <h4 class="font-bold text-md text-red-800 mb-2">步驟 3: 電子病歷管理</h4>
+                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+                    <li>所有病歷內容需完成電子簽章。</li>
+                    <li>目前醫院有開發行動憑證簽章，安裝綁定後隨時皆可簽章哦～</li>
+                </ul>
+            </div>
+            <div class="bg-blue-50 p-4 rounded-lg shadow-sm">
+                <h4 class="font-bold text-md text-blue-800 mb-2">常見問題與應對</h4>
+                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+                    <li>遺漏重要資訊：如過敏史、用藥史、重要檢查結果。</li>
+                    <li>記錄不夠詳細：缺乏關鍵細節，導致後續照護困難。</li>
+                    <li>未即時記錄：延遲記錄可能導致資訊不準確或遺漏。</li>
+                    <li>縮寫不明：影響辨識與溝通。</li>
+                    <li>法律風險：不當的病歷書寫可能引發醫療糾紛。</li>
+                </ul>
+                <p class="text-gray-700 text-sm mt-2">
+                    <span class="font-bold">相關資源：請參考院內 intranet 病歷委員會網頁 / 病歷書寫系統操作教學</span>
+                    <a href="https://intranet.chimei.org.tw/部門資訊/永康/top/59004/index.html" target="_blank" class="text-blue-600 hover:underline">奇美醫院病歷委員會</a><br>
+                </p>
+            </div>
+          <div class="highlight-box">
+                        <h3>請嚴格遵守病人隱私保護原則，非業務範圍或授權『不得』查閱或洩露病歷資料。</h3>
+                     </div>
+        </div>
+
+       <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+            <h3 class="sub-section-title">6 病人為中心照護流程與權責</h3>      
+            <span class="sub-section-icon">❤️‍🩹</span>
+                <ul class="list-disc list-inside text-gray-700 space-y-1">
+        <p class="text-gray-700 mb-4 text-center">『以病人為中心』是醫療的核心理念，了解病人的權利與醫院的規範，是提供優質照護的基礎。</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-blue-50 p-4 rounded-lg shadow-sm">
+                <h4 class="font-bold text-md text-blue-800 mb-2">階段 1: 病人辨識與隱私保護</h4>
+                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+                    <li>時機：執行醫療處置、給藥、輸血、檢體採集、檢查、治療、手術前，以及轉送病人時。</li>
+                    <li>方法：至少使用兩種身份資料辨識病人，如姓名、出生年月日、病歷號碼、身份證字號、手圈條碼等。</li>
+                    <li><class="font-bold">請勿使用『床位號』做為病人辨識的依據！</li>
+                    <li>特殊情況：對於意識不清、嬰幼兒、急診或無名氏病人，應由手圈及與家屬進行確認至少使用兩種身份資料進行辨識。</li>
+                    <li>隱私保護：在診查、採檢、運送、治療與照護、陪探病、教學等所有環節中，務必嚴格保護病人隱私。病床應有隔簾或獨立空間以保障隱私。</li>
+                    <li>就醫資料保密：尊重病人對就醫資料保密的意願，非授權不得查閱或洩漏。</li>
+                    <li>病人權利政策：熟悉醫院公布的病人權利政策或相關規範。</li>
+                    <li>病人自主權利法：了解病人自主權利法的精神與內容，尊重病人醫療決定。</li>
+                </ul>
+            </div>
+            <div class="bg-green-50 p-4 rounded-lg shadow-sm">
+                <h4 class="font-bold text-md text-green-800 mb-2">階段 2: 知情同意與醫病溝通</h4>
+                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+                    <li>醫療法相關條文：執行侵入性檢查/治療、手術、麻醉前，務必依醫療法第81、63、64條規定，充分說明並取得病人或家屬的知情同意書。</li>
+                    <li>友善環境：對於高齡、身心障礙、HIV或新住民等族群，應提供友善的溝通環境和方式（如多國語言衛教、輔具協助），確保其充分理解。</li>
+                    <li>住院診療計畫：向病人及家屬說明住院的必要性、診療計畫、可能的替代方案及預期結果。</li>
+                    <li>醫病共享決策 (SDM)：積極運用 SDM 平台與工具，鼓勵病人參與醫療決策，使其了解各種治療選項的利弊，共同做出最適合的選擇。</li>
+                    <li>聰明就醫 (Choosing Wisely)：推廣聰明就醫理念，避免不必要的檢查與治療。</li>
+                  <div class="highlight-box">
+                        <h3>無論年紀、性別、性向、種族、國籍、語言、宗教、文化、疾病、身障等，我們提供民眾所需要的醫療，共同打造友善的醫療環境。</h3>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-yellow-50 p-4 rounded-lg shadow-sm">
+                <h4 class="font-bold text-md text-yellow-800 mb-2">階段 3: 安寧緩和與末期照護</h4>
+                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+                    <li>安寧緩和家庭會議紀錄：對於有安寧緩和需求的病人，應與病人或家屬進行充分溝通，並詳細記錄家庭會議內容。</li>
+                    <li>病人生命末期醫療意願註記及記錄：確認病人是否簽署不施行心肺復甦術(DNR) 或預立醫療決定書(ACP)，並在病歷中正確註記。
+                        <ul>
+                            <li>DNR 意願書/同意書簽署：由醫師向病人或家屬說明，經簽署後，醫師須於24小時內開立 DNR 醫囑，並於病歷首頁明顯處標示。</li>
+                            <li>DNR 醫囑開立：若病人已簽署 DNR 意願書，醫師應於資訊系統開立「不施行心肺復甦術」醫囑，並於病歷首頁及相關紀錄中明確標示。</li>
+                            <li>DNR 意願更新/撤回：若病人或家屬意願改變，應依規定更新或撤回意願書，並即時更新醫囑與病歷標示。</li>
+                        </ul>
+                    </li>
+                    <li>預立醫療照護諮商 (ACP)：提供 ACP 相關資訊，協助病人預先規劃未來醫療照護。</li>
+                    <li>非癌症末期病人照護：了解非癌症末期病人的安寧照護需求與相關規範。</li>
+                    <li>安寧緩和/器官捐贈宣導：積極參與並宣導相關活動與教育課程。</li>
+                </ul>
+            </div>
+            <div class="bg-red-50 p-4 rounded-lg shadow-sm">
+                <h4 class="font-bold text-md text-red-800 mb-2">階段 4: 檢體採集與運送流程</h4>
+                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+                    <li>採集規範：所有檢體採集（手術室、檢查室、門診含牙醫）都需依規範上封條/核簽，並放置於上鎖的檢體櫃中。</li>
+                    <li>運送流程：檢體輸送人員必須將檢體直達病理部，不可在其他單位停留。</li>
+                    <li>共同確認：採集檢體時，採檢者與護理師或專師需共同確認檢體組織及數量，並在容器封條上簽名/日期。</li>
+                    <li>儲放安全：檢體若無法立即送檢，必須放置在單位內上鎖的檢體櫃中。</li>
+                    <li>病理組織檢體安全管理：確保檢體採集、儲放（上鎖）、包裝、運送（直達病理部）的流程與規範。</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+            <h3 class="sub-section-title">7 醫囑安全</h3>      
+            <span class="sub-section-icon">📝</span>
+                <ul class="list-disc list-inside text-gray-700 space-y-1">
+        <p class="text-gray-700 mb-4 text-center">醫囑是醫療行為的依據，確保醫囑的正確性與安全性是醫師的重要職責。</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-purple-50 p-4 rounded-lg shadow-sm">
+                <h4 class="font-bold text-md text-purple-800 mb-2">步驟 1: 醫囑開立與覆核</h4>
+                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+                    <li>口頭醫囑時機：僅限於當責醫師執行無菌技術或治療中，或急救時（急救結束30分鐘內需完成電腦醫囑開立）。</li>
+                    <li>電子簽章：所有醫囑開立後，須於24小時內完成電子簽章。</li>
+                    <li>覆核醫囑：實習醫學生及未持有醫師證照者開立的醫囑，須以覆核醫囑方式開立，並經合格醫師確認核可。</li>
+                    <li>接收口頭醫囑限制：未通過評核的新進護理人員及實習護生，不得接受口頭(電話)醫囑。</li>
+                    <li>Close Loop 技巧：醫事人員接收口頭醫囑後，應完整覆誦，發出訊息者需確認「是的！沒錯！」。</li>
+                    <li>疑慮醫囑處理：若對醫囑有任何疑慮，應立即與開立醫師溝通釐清。</li>
+                    <li>專師預立醫囑：專科護理師預立醫囑範圍依本院專科護理師執業委員會規範。</li>
+                </ul>
+            </div>
+            <div class="bg-yellow-50 p-4 rounded-lg shadow-sm">
+                <h4 class="font-bold text-md text-yellow-800 mb-2">步驟 2: 用藥安全機制</h4>
+                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+                    <li>處方醫令防錯警示：資訊系統設有多項自動查核與防錯警示，如藥物過敏、ADR、極量管制、交互作用、重複用藥、高警訊藥物、肝腎功能檢核、孕婦/兒童不宜用藥等。務必留意系統提示。</li>
+                    <li>高警訊藥物管理：熟悉醫院的高警訊藥物清單及管理機制 (SOP)，包括特殊標示、單位含量、開封藥品效期等。</li>
+                    <li>管制藥品管理：
+                        <ul>
+                            <li>單位管理：1-3級管制藥品須固定專用櫃加鎖儲存，專人負責，三班點班交接，並登錄使用情形。</li>
+                            <li>用藥管控：癌症/末期患者口服劑型優先，每次處方限14天；穿皮貼片劑限15天，使用過需繳回藥局銷毀；針劑原則上不讓病人攜回家。</li>
+                            <li>專用處方箋：1-3級管制藥品須由領有執照醫師以「管制藥品專用處方箋」開立。</li>
+                            <li>系統管控：門診自費管制藥品限7天；首次 Zolpidem/Zopiclon 限7天；BZD 連續使用警示；急診針劑限制等。</li>
+                        </ul>
+                    </li>
+                    <li>臨床藥物治療監測 (TDM)：常規監控的 7 項藥物 (Aminoglycosides, Vancomycin, Valporic acid, Theophylline, Digoxin, Phenytoin) TDM 篩選條件與濃度參考值，並參考藥師建議調整劑量。</li>
+                    <li>自備藥管理：病人自備藥品需經醫師判斷是否使用，最多可開立5項，藥師會審核處方。藥品辨識由醫師負責，不可開立「自備自服」醫囑。</li>
+                    <li>藥物不良反應 (ADR) 通報：積極通報 ADR，了解通報件數、宣導機制與成效。</li>
+                    <li>過敏史登錄及用藥管控：
+                        <ul>
+                            <li>確認時機：住院病人於入院時、門診病人於初診或複診時，應確認過敏史。</li>
+                            <li>用藥管控：疑似過敏者，醫師應審慎評估；輕度過敏者，可考慮開立替代藥物；重度過敏者，絕對禁止開立該藥物。</li>
+                            <li>查詢：可從病歷彙總畫面查詢病人過敏史及 ADR 紀錄。</li>
+                        </ul>
+                    </li>
+                    <li>手術抗血栓用藥提示流程：了解系統如何檢核抗血栓用藥、栓塞/出血風險判定，以及術後藥物加回提示系統的流程。</li>
+                    <li>抗生素使用注意事項：
+                        <ul>
+                            <li>預防性抗生素：預防性抗生素應於手術前 60 分鐘內給藥，並在術後 24 小時內停用。</li>
+                            <li>劑量試算：資訊系統提供抗生素劑量試算表，協助醫師精確給藥。</li>
+                            <li>用藥理由：開立抗生素醫囑時，務必註明用藥理由。</li>
+                            <li>監測與審查：感管部門會定期進行感管教育訓練、監測院內感染分離菌種報告，並對抗生素使用進行審查。</li>
+                        </ul>
+                    </li>
+                  <div class="highlight-box">
+                        <h3>醫師請先完成『鎮靜麻醉』教育訓練課程，方可開立相關醫囑。</h3>
+                     </div>
+                </ul>
+            </div>
+            <div class="bg-red-50 p-4 rounded-lg shadow-sm">
+                <h4 class="font-bold text-md text-red-800 mb-2">步驟 3: 輸血相關作業流程</h4>
+                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+                    <li>輸血規範：熟悉大量、最緊急、緊急、急診範圍、普通輸血等不同緊急程度的輸血規範、適應症、限用血品和發血時效。</li>
+                    <li>輸血流程：了解用血前檢驗（交叉試驗）、採血前病人身份確認、備血核對、緊急備血、領血、血品退回等流程。</li>
+                    <li>輸血過敏反應：應了解輸血過敏反應的處理流程並留下紀錄。</li>
+                </ul>
+            </div>
+            <div class="bg-blue-50 p-4 rounded-lg shadow-sm">
+                <h4 class="font-bold text-md text-blue-800 mb-2">步驟 4: 身體約束醫囑與紀錄流程</h4>
+                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+                    <li>醫囑開立：若需施行身體約束，應自醫囑系統開立保護性約束醫囑，內容需記述行動限制的原因、形式（四肢或胸部）、持續時間及注意事項。</li>
+                    <li>執行評估與紀錄：護理師每班會點選工作清單約束醫囑，一般病房有陪伴者每小時探視，無家屬或特殊狀況每30分鐘探視，精神科病人每15分鐘探視。護理紀錄約束原因需與醫囑相同。</li>
+                    <li>持續評估：當醫囑到期，若病人仍有持續約束需求，應提醒醫師評估並重新開立醫囑。</li>
+                </ul>
+            </div>
+        </div>
+
+                  <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+            <h3 class="sub-section-title">8 檢驗、病理與放射作業流程</h3>      
+            <span class="sub-section-icon">🔬</span>
+                <ul class="list-disc list-inside text-gray-700 space-y-1">
+        <p class="text-gray-700 mb-4 text-center">正確判讀檢驗、病理與放射報告，並了解相關作業流程，是臨床診斷的關鍵。</p>
+      
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+            <li>報告時效與異常結果通報：檢驗、放射診斷報告應符合時效要求，若有異常結果應依規範通報並檢討修正。</li>
+            <li>高風險醫療數據與危急值處理流程：
+                <ul class="list-disc list-inside ml-4">
+                    <li>定義：危急值檢驗項目（5項）與危急影像報告（4項）為高風險醫療數據。</li>
+                    <li>通知與處理時效：危急值應在 <span class="text-red-600 font-bold">30分鐘內</span> 完成處理與回覆。</li>
+                    <li>檢驗報告顏色：正常值為綠色，異常值為黃色，危險值為橘色，危急值為紅色。</li>
+                    <li>高風險醫療數據處理回報步驟：
+                        <ul class="list-disc list-inside ml-4">
+                            <li>門診：於門診系統「檢驗報告」頁面點選「危急值回報」按鈕。</li>
+                            <li>住院：於 CIMS 系統「檢驗報告」頁面點選「危急值回報」按鈕。</li>
+                            <li>CMedLine：透過 CMedLine App 直接回覆危急值。</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>    
+        </ul>
+
+        <h3 class="text-lg font-semibold mb-2 text-gray-800 mt-6 text-center">1.9 病房照護與交班工作流程</h3>
+        <p class="text-gray-700 mb-4 text-center">高效的病房管理與清晰的交班，是確保病人安全與醫療品質的基石。</p>
+        <span class="icon-large">🏥</span>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-blue-50 p-4 rounded-lg shadow-sm">
+                <h4 class="font-bold text-md text-blue-800 mb-2">階段 1: 醫師迴診與病程記錄</h4>
+                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+                    <li>每日迴診：主治醫師應每日迴診，並依病況變化調整診療計畫與病程紀錄，及時完成電子簽章。</li>
+                    <li>假日查房：假日期間的查房與記錄規範。</li>
+                    <li>代理機制：熟悉主治醫師請假時的代理人查詢方式，以及無法聯絡上主治醫師時的應變處理流程。</li>
+                    <li>電子病歷不可否認性：了解電子病歷的法律效力與不可否認性原則。</li>
+                </ul>
+            </div>
+            <div class="bg-green-50 p-4 rounded-lg shadow-sm">
+                <h4 class="font-bold text-md text-green-800 mb-2">階段 2: 確實交班與轉送安全</h4>
+                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+                    <li>交班時機與方式：了解每日交接班的時機、方式及記錄要求，必要時需面對面口頭交班。</li>
+                    <li>ISBAR 結構化溝通：運用 ISBAR (Introduction, Situation, Background, Assessment, Recommendation) 結構化溝通方式進行交班，提高資訊傳遞完整性。</li>
+                    <li>跨單位交接：病人跨單位（如急診/檢查單位/加護病房/轉院）轉送時，務必進行完整的交班與轉送前評估紀錄。</li>
+                    <li>轉送安全：確保病人轉送過程中的安全，包括醫護人員陪同情況與設備安全，並確認轉送人員受過相關訓練。
+                        <ul class="list-disc list-inside ml-4">
+                            <li>轉送評估時機：病人轉送前、轉送中、轉送後。</li>
+                            <li>輸送醫囑開立：醫師應開立輸送醫囑，註明病人疾病嚴重度分級（如重症、中症、輕症），並設定陪同人員（如醫師、護理師、專師）。</li>
+                            <li>轉送前查檢：確認病人身份、生命徵象穩定、攜帶必要設備與藥品、通知接收單位。</li>
+                            <li>緊急輸送電梯：永康院區設有 3 部緊急輸送電梯，分別位於第二醫療大樓、第五醫療大樓及急診室，僅供緊急轉送病人使用。</li>
+                        </ul>
+                    </li>
+                    <li>出院或轉他院：提供重要診療紀錄予相關科別或醫院。</li>
+                </ul>
+            </div>
+            <div class="bg-yellow-50 p-4 rounded-lg shadow-sm">
+                <h4 class="font-bold text-md text-yellow-800 mb-2">階段 3: 會診管理與團隊照護</h4>
+                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+                    <li>會診品質：了解聯繫會診醫師、會診制度、時效（緊急 2 小時、一般 1 個工作日）及會診品質之檢討改善。
+                        <ul class="list-disc list-inside ml-4">
+                            <li>會診類別與時效：
+                                <ul class="list-disc list-inside ml-4">
+                                    <li>最緊急會診 (STAT)：需立即處理，無時效限制，口頭通知。</li>
+                                    <li>緊急會診 (Urgent)：2 小時內完成，口頭通知。</li>
+                                    <li>一般會診 (Routine)：1 個工作天內完成，電腦醫囑。</li>
+                                </ul>
+                            </li>
+                            <li>通知與提醒：會診醫師應於時效內完成會診，若逾時會由系統發出提醒。</li>
+                            <li>會診開立與回覆：醫師應依會診需求開立醫囑，會診醫師應於時效內完成會診並回覆。</li>
+                        </ul>
+                    </li>
+                    <li>會診記錄：會診及討論結果應詳細記錄於病人診療紀錄內。</li>
+                    <li>營養評估：了解營養評估機制、營養會診時效、緊急通知方式，並與營養師共同擬定照護計畫。</li>
+                    <li>復健評估：熟悉復健師依病情評估結果訂定復健計畫，並具體呈現病人復健進展。</li>
+                    <li>整合照護：對於高齡、多重疾病、身心障礙病人，提供周全性評估與整合照護（含急性後期照護 PAC）。</li>
+                    <li>身心靈社會照護：評估病人身心社會靈性需求，並提供社工、心理師、志工或宗教師的訪視、支持或諮詢服務。</li>
+                </ul>
+            </div>
+            <div class="bg-red-50 p-4 rounded-lg shadow-sm">
+                <h4 class="font-bold text-md text-red-800 mb-2">階段 4: 出院準備與危機管理</h4>
+                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+                    <li>出院計畫：了解何時開始給予出院計畫，並適切規劃完整的出院照護計畫與指導。</li>
+                    <li>出院準備小組：善用出院準備服務委員運作機制，依病人需求提供出院照護計畫。</li>
+                    <li>用藥指導：若病人腎/肝功能與住院前不同，應對原先門診慢性病用藥給予適當指導。</li>
+                    <li>臨終處理：熟悉病人臨終前、後之處理流程及醫護或社工人員的哀傷輔導紀錄。</li>
+                    <li>居家照護轉介：若病人有長期照護或居家照護需求，應依流程轉介並提供資訊給後續照護機構。</li>
+                    <li>危機管理/急救應變：熟悉暴力突發事件處理流程、暴露於血液/體液及尖銳物品扎傷的預防及處置。
+                        <ul class="list-disc list-inside ml-4">
+                            <li>針扎事件處理及通報：發生針扎事件時，應立即依醫院規範進行處理，並透過「捷安報」通報。</li>
+                        </ul>
+                    </li>
+                    <li>突發危急病人急救措施：熟悉急救 SOP、急救車管理（設備功能、藥品/衛材效期、點班），並確保醫護人員具備重症照護及 ALS 訓練。</li>
+                    <li>住院病人陪探病管理：
+                        <ul class="list-disc list-inside ml-4">
+                            <li>陪病者實名制：陪病者需採實名制登記。</li>
+                            <li>訪客探病時間與人數：訪客探病時間為每日固定時段，每床限 2 人。</li>
+                            <li>體溫異常處理：陪病者若體溫異常，應立即處理並依規定通報。</li>
+                        </ul>
+                    </li>
+                    <li>門急診病人 TOCC 問診與查詢：了解 TOCC (旅遊史、職業別、接觸史、群聚史) 問診的重要性，並熟悉資訊系統中的 TOCC 登錄與查詢畫面。</li>
+                    <li>傳染病病人處理流程及運送動線：熟悉傳染病病人的處理流程、運送動線及相關管理程序書。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
