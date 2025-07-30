@@ -19,10 +19,12 @@
         }
 
         .container {
+            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
-        }
+            box-sizing: border-box;
+        }    
 
         .header {
             text-align: center;
@@ -214,7 +216,13 @@
         .expand-btn:hover {
             background: #2980b9;
         }
-
+        
+        .jieanbao-img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto 1rem auto;
+        }
         .bundle-care {
             background: linear-gradient(135deg, #fd79a8, #e84393);
             color: white;
@@ -452,7 +460,7 @@
                         <span class="emoji">🚨</span>
                         <strong>捷安報</strong>
                         醫院的專屬通報系統，在《系統主程式》就可以點選。
-                        <img src="Jieanbao.jpg" alt="捷安報" class="w-86 h-86 mx-auto mb-4">    
+                        <img src="Jieanbao.jpg" alt="捷安報" class="jieanbao-img">    
                     </div>
                     
                     <div class="bullet-point">
