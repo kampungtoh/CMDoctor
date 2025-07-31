@@ -1,1 +1,651 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新進醫師研究指引</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .header .subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+        }
+
+        .header .description {
+            color: #34495e;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section-grid {
+            display: grid;
+            gap: 25px;
+            margin-bottom: 30px;
+            grid-template-columns: 1fr;
+        }
+
+        @media (min-width: 768px) {
+            .section-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .section-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .section-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #3498db, #2ecc71);
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .section-title .emoji {
+            font-size: 1.8rem;
+            margin-right: 10px;
+        }
+
+        .section-title .title-text {
+            flex-basis: 100%;
+            margin-top: 5px;
+        }
+
+        .detail-content {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #ecf0f1;
+        }
+
+        .bullet-point {
+            display: flex;
+            align-items: flex-start;
+            margin: 12px 0;
+            padding: 12px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .bullet-point:hover {
+            background: #e3f2fd;
+        }
+
+        .bullet-point .emoji {
+            margin-right: 12px;
+            flex-shrink: 0;
+            width: 24px;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        .bullet-point .content {
+            flex: 1;
+        }
+
+        .bullet-point strong {
+            display: block;
+            margin-bottom: 4px;
+            color: #2c3e50;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+            color: white;
+            padding: 25px 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            line-height: 1.6;
+        }
+
+        .highlight-box h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            text-align: center;
+        }
+
+        .process-steps {
+            display: grid;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        @media (min-width: 768px) {
+            .process-steps {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+
+        .process-step {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid #e9ecef;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .process-step:hover {
+            border-color: #3498db;
+            background: #e3f2fd;
+            transform: translateY(-2px);
+        }
+
+        .process-step .step-number {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #3498db;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .process-step .step-emoji {
+            font-size: 2rem;
+            display: block;
+            margin: 15px 0 10px 0;
+        }
+
+        .process-step h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .process-step p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .contact-grid {
+            display: grid;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        @media (min-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .contact-card h4 {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .contact-card .phone {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        .important-notice {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .important-notice h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            text-align: center;
+        }
+
+        .important-notice ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .important-notice li {
+            margin: 10px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .important-notice li:before {
+            content: "⚠️";
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .footer-info {
+            background: rgba(255,255,255,0.15);
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 30px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.3);
+            text-align: center;
+        }
+
+        .footer-info h3 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .footer-info p {
+            color: #ecf0f1;
+            margin: 5px 0;
+        }
+
+        .footer-info .highlight {
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔬 新進醫師研究指引</h1>
+            <div class="subtitle">Research Guide for New Physicians</div>
+            <div class="description">
+                歡迎加入奇美醫院這個大家庭！本院每年投入近2億元研究經費，設立完善的研究輔導及獎勵機制，鼓勵同仁參與研究、出國進修及發表論文。我們與多所國內知名大學建教合作，共同進行醫學新知的探索。
+            </div>
+        </div>
+
+        <div class="section-grid">
+            <!-- 研究部介紹 -->
+            <div class="section-card">
+                <div class="section-title">
+                    <span class="emoji">🏢</span>
+                    <div class="title-text">醫學研究部簡介<br><small style="font-size: 0.8em; color: #7f8c8d;">Research Department Overview</small></div>
+                </div>
+                
+                <div class="detail-content">
+                    <div class="bullet-point">
+                        <span class="emoji">🏗️</span>
+                        <div class="content">
+                            <strong>研究大樓</strong>
+                            本院於民國90年2月啟用研究大樓，延攬許多研究人才，成立各類專業研究室。
+                        </div>
+                    </div>
+                    
+                    <div class="bullet-point">
+                        <span class="emoji">💰</span>
+                        <div class="content">
+                            <strong>研究經費</strong>
+                            每年投入近2億元研究經費，設立研究輔導及獎勵機制。
+                        </div>
+                    </div>
+                    
+                    <div class="bullet-point">
+                        <span class="emoji">🎓</span>
+                        <div class="content">
+                            <strong>建教合作</strong>
+                            與台北醫學大學、國防醫學大學、成功大學、陽明交通大學等多所知名大學合作。
+                        </div>
+                    </div>
+                    
+                    <div class="bullet-point">
+                        <span class="emoji">🏆</span>
+                        <div class="content">
+                            <strong>國際認證</strong>
+                            2017年通過AAHRPP評鑑，2020年通過美國AAHRPP再認證殊榮。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- IRB人體試驗委員會 -->
+            <div class="section-card">
+                <div class="section-title">
+                    <span class="emoji">⚖️</span>
+                    <div class="title-text">人體試驗委員會 (IRB)<br><small style="font-size: 0.8em; color: #7f8c8d;">Institutional Review Board</small></div>
+                </div>
+                
+                <div class="detail-content">
+                    <div class="highlight-box">
+                        <h3>🛡️ IRB的使命</h3>
+                        <p>本院依循相關法規所成立之獨立審查單位，任務在審查研究計畫之設計與執行，尊重研究對象之自主權，確保研究進行之風險與利益相平衡，保障研究對象之權益。</p>
+                    </div>
+
+                    <div class="bullet-point">
+                        <span class="emoji">📋</span>
+                        <div class="content">
+                            <strong>審查範圍</strong>
+                            所有與人體相關之醫學研究（包含新藥、新醫療器材、新醫療技術、學術研究、問卷調查）。
+                        </div>
+                    </div>
+                    
+                    <div class="bullet-point">
+                        <span class="emoji">✅</span>
+                        <div class="content">
+                            <strong>審查要求</strong>
+                            研究需向人體試驗委員會提出申請並經委員會審查通過，方可進行。
+                        </div>
+                    </div>
+                    
+                    <div class="bullet-point">
+                        <span class="emoji">🔒</span>
+                        <div class="content">
+                            <strong>受試者保護</strong>
+                            確保受試者安全，遵循優良臨床試驗準則及相關法規。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 研究申請流程 -->
+            <div class="section-card">
+                <div class="section-title">
+                    <span class="emoji">📝</span>
+                    <div class="title-text">研究申請流程<br><small style="font-size: 0.8em; color: #7f8c8d;">Research Application Process</small></div>
+                </div>
+                
+                <div class="detail-content">
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <span class="step-emoji">💡</span>
+                            <h4>研究構想</h4>
+                            <p>確定研究主題、目標及假設</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <span class="step-emoji">📚</span>
+                            <h4>文獻回顧</h4>
+                            <p>深入了解相關研究背景</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <span class="step-emoji">📄</span>
+                            <h4>撰寫計畫書</h4>
+                            <p>完成詳細研究計畫書</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <span class="step-emoji">⚖️</span>
+                            <h4>IRB送審</h4>
+                            <p>向人體試驗委員會申請</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">5</div>
+                            <span class="step-emoji">🔬</span>
+                            <h4>執行研究</h4>
+                            <p>按計畫進行研究</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">6</div>
+                            <span class="step-emoji">📊</span>
+                            <h4>數據分析</h4>
+                            <p>統計分析研究結果</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 研究支援資源 -->
+            <div class="section-card">
+                <div class="section-title">
+                    <span class="emoji">🛠️</span>
+                    <div class="title-text">研究支援資源<br><small style="font-size: 0.8em; color: #7f8c8d;">Research Support Resources</small></div>
+                </div>
+                
+                <div class="detail-content">
+                    <div class="bullet-point">
+                        <span class="emoji">🏢</span>
+                        <div class="content">
+                            <strong>專業研究室</strong>
+                            癌症轉譯醫學研究室、新藥暨新醫材研究室等各類專業研究設施。
+                        </div>
+                    </div>
+                    
+                    <div class="bullet-point">
+                        <span class="emoji">🐭</span>
+                        <div class="content">
+                            <strong>實驗動物中心</strong>
+                            提供完整的動物實驗支援，包含標準作業程序及專業獸醫師諮詢。
+                        </div>
+                    </div>
+                    
+                    <div class="bullet-point">
+                        <span class="emoji">🧬</span>
+                        <div class="content">
+                            <strong>人體生物資料庫</strong>
+                            提供生物檢體保存及相關研究支援服務。
+                        </div>
+                    </div>
+                    
+                    <div class="bullet-point">
+                        <span class="emoji">📊</span>
+                        <div class="content">
+                            <strong>統計諮詢</strong>
+                            提供研究設計及統計分析諮詢服務。
+                        </div>
+                    </div>
+                    
+                    <div class="bullet-point">
+                        <span class="emoji">💻</span>
+                        <div class="content">
+                            <strong>院內外計劃經費補助</strong>
+                            每年本院提供院內計劃補助供同仁申請（包括住院醫師），亦有院際計劃及其他國家計劃等。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 研究獎勵制度 -->
+            <div class="section-card">
+                <div class="section-title">
+                    <span class="emoji">🏆</span>
+                    <div class="title-text">研究獎勵制度<br><small style="font-size: 0.8em; color: #7f8c8d;">Research Incentive Program</small></div>
+                </div>
+                
+                <div class="detail-content">
+                    <div class="bullet-point">
+                        <span class="emoji">💰</span>
+                        <div class="content">
+                            <strong>研究經費補助</strong>
+                            院內研究計畫經費補助，鼓勵創新研究。
+                        </div>
+                    </div>
+                    
+                    <div class="bullet-point">
+                        <span class="emoji">📝</span>
+                        <div class="content">
+                            <strong>論文發表獎勵</strong>
+                            依據期刊影響因子給予論文發表獎勵金。
+                        </div>
+                    </div>
+                    
+                    <div class="bullet-point">
+                        <span class="emoji">✈️</span>
+                        <div class="content">
+                            <strong>出國進修補助</strong>
+                            支持同仁出國參與國際會議或進修。
+                        </div>
+                    </div>
+                    
+                    <div class="bullet-point">
+                        <span class="emoji">🎯</span>
+                        <div class="content">
+                            <strong>研究考核</strong>
+                            研究成果納入升遷及績效評估。
+                        </div>
+                    </div>
+                    
+                    <div class="bullet-point">
+                        <span class="emoji">🏅</span>
+                        <div class="content">
+                            <strong>研究獎項</strong>
+                            年度優秀研究獎、新進人員研究獎等多項獎勵。
+                        </div>
+                    </div>
+                </div>
+            </div>
+      <!-- 重要提醒 -->
+        <div class="important-notice">
+            <h3>⚠️ 重要提醒事項</h3>
+            <ul>
+                <li>所有涉及人體的研究都必須通過IRB審查</li>
+                <li>研究倫理訓練課程為必修，需定期更新認證</li>
+                <li>臨床試驗需遵循GCP (Good Clinical Practice) 準則</li>
+                <li>研究資料的保密性及受試者隱私保護至關重要</li>
+                <li>如有利益衝突情況，須主動申報</li>
+                <li>研究過程中如有任何變更，需及時向IRB報告</li>
+            </ul>
+        </div>
+            <!-- 聯絡資訊 -->
+            <div class="section-card">
+                <div class="section-title">
+                    <span class="emoji">📞</span>
+                    <div class="title-text">重要聯絡資訊<br><small style="font-size: 0.8em; color: #7f8c8d;">Important Contacts</small></div>
+                </div>
+                
+                <div class="detail-content">
+                    <div class="highlight-box">
+                        <h3>📋 醫學研究部聯絡資訊</h3>
+                        <div class="contact-grid">
+                            <div class="contact-card">
+                                <h4>📧 院內研究計畫</h4>
+                                <p>吳雅慧組長</p>
+                                <p class="phone">分機：52653</p>
+                            </div>
+                            <div class="contact-card">
+                                <h4>📋 專案管理</h4>
+                                <p>王惠香專案管理員</p>
+                                <p class="phone">分機：52652</p>
+                            </div>
+                        </div>
+                        <p style="text-align: center; margin-top: 15px;">
+                            📍 地址：710台南市永康區中華路901號<br>
+                            🌐 網站：<a href="http://sub.chimei.org.tw/54000/" target="_blank" style="color: #ffd700;">醫學研究部官網</a>
+                        </p>
+                      <h3>📋 人體試驗委員會聯絡資訊</h3>
+                        <div class="contact-grid">
+                            <div class="contact-card">
+                                <h4>📋 受試者權益及研究倫理相關之諮詢與輔導</h4>
+                                <p>邱碧宇組長</p>
+                                <p class="phone">分機：53720</p>
+                            </div>
+                        </div>
+                        <p style="text-align: center; margin-top: 15px;">
+                            📍 地址：710台南市永康區中華路901號 第三醫療大樓四樓<br>
+                            🌐 網站：<a href="https://www.chimei.org.tw/main/cmh_department/top/59024/indexIntranet.html" target="_blank" style="color: #ffd700;">人體試驗委員會官網</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部資訊 -->
+        <div class="footer-info">
+            <h3>🌟 開啟您的研究之路</h3>
+            <p>研究不僅是學術追求，更是改善病人照護品質的重要途徑</p>
+            <p>歡迎新進醫師踴躍參與，讓我們一起推動醫學進步！</p>
+        </div>
+    </div>
+</body>
+</html>
