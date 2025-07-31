@@ -1,1 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資訊系統篇</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* 這些樣式需要複製到每個獨立的內容頁面中，以確保顯示一致性 */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff; /* Changed to white */
+        }
+        .infographic-card {
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #e2e8f0;
+        }
+        .infographic-section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .icon-large {
+            font-size: 4rem;
+            line-height: 1;
+            display: block;
+            margin: 0 auto 0.5rem; /* Centering the icon */
+        }
+        .list-center-items li {
+            text-align: center;
+            list-style-position: inside; /* Ensures the bullet is inside the centered text */
+        }
+        /* Style for sub-section icons */
+        .sub-section-icon {
+            font-size: 2.5rem; /* Smaller icon for sub-sections */
+            line-height: 1;
+            display: block;
+            margin: 0 auto 0.5rem;
+            color: #3b82f6; /* Blue color for emphasis */
+        }
+        .sub-section-title {
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* font-semibold */
+            color: #1f2937; /* text-gray-900 */
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .sub-section-content ul {
+            padding-left: 1.5rem; /* Indent for list items */
+        }
+        .sub-section-content li {
+            margin-bottom: 0.5rem;
+        }
+        .image-placeholder {
+            width: 100%;
+            height: 200px; /* Adjust height as needed */
+            background-color: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #64748b;
+            border-radius: 0.75rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+      .highlight-box {
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
 
+        .highlight-box h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+            text-align: center;
+        }
+      .jieanbao-img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto 1rem auto;
+        }
+    </style>
+</head>
+<body class="p-4">
+    <div class="infographic-card bg-gradient-to-br from-green-50 to-green-100">
+        <h2 class="infographic-section-title">資訊系統篇</h2>
+        <span class="icon-large">🖥️</span>
+
+        <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 mt-6">
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200 text-center">
+                <span class="sub-section-icon">💻</span>
+                <h4 class="font-bold text-lg text-gray-800 mb-2">系統主程式</h4>
+                <p class="text-gray-700 mb-4">
+                    奇美醫院所有醫療作業，包括急診、門診及住院，都透過核心《系統主程式》，輸入人事號及密碼後進行。這個系統功能按鍵相當直觀，讓您輕鬆掌握。
+                </p>
+                <img src="System.jpg" alt="系統主程式" class="jieanbao-img">  
+                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1 text-left mx-auto max-w-sm">
+                    <li> 除了上述各醫療系統，醫師們也可以在這裡找到一些快速功能：</li>
+                    <li>『病歷彙總』：可輸入病歷號快速查詢完整病歷。</li>
+                    <li>『學分得來速』：線上學習課程，完成問答即可獲得院內學分。</li>
+                    <li>『立即傳呼』：方便您傳送簡訊給醫院同仁，快速溝通。</li>
+                    <li>『A+奇幫手』：奇美的ChatGPT，不用付費，也能使用。</li>
+                    <li>『Intranet』：除了可以進入Intranet系統，下拉選單裡還有『全院數據平台』、『Uptodate』、『電子處方集』、『圖書館電子資源』等系統，所有員工都可以開放使用。</li>
+                    <img src="System2.jpg" alt="系統主程式" class="jieanbao-img">  
+                </ul>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200 text-center">
+                <span class="sub-section-icon">📢</span>
+                <h4 class="font-bold text-lg text-gray-800 mb-2">奇美大小事，都在這裡！</h4>
+                <p class="text-gray-700 mb-4">
+                    醫院的重要公告、最新消息、活動資訊等，都會在『Intranet』以及《『奇美 Epaper (大聲公)』》上發布。務必定期查閱，掌握第一手資訊。透過 Intranet，您還可以進入：
+                </p>
+                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1 text-left mx-auto max-w-sm">
+                    <li>院內公文系統</li>
+                    <li>個人資料更新</li>
+                    <li>活動報名</li>
+                    <li>投票等各項系統</li>
+                </ul>
+                <img src="Intranet.jpg" alt="intranet" class="jieanbao-img">  
+                <img src="ePaper.jpg" alt="epaper" class="jieanbao-img">  
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200 text-center">
+                <span class="sub-section-icon">📱</span>
+                <h4 class="font-bold text-lg text-gray-800 mb-2">您的 App 好夥伴：CMedline+</h4>
+                <p class="text-gray-700 mb-4">
+                    記得安裝『CMedline+』這個必備 App！它將是您在醫院工作的好夥伴，提供危急值通知、行動查房、醫療照片上傳等實用功能，讓您隨時掌握病人資訊。
+                    <br>請從Intranet系統下拉選單裡點選『CMedLine+安裝』申請安裝。
+                </p>
+                <img src="CMedline+.jpg" alt="epaper" class="jieanbao-img">
+            </div>
+        </div>
+    </div>
+
+    <!-- Disclaimer at the bottom -->
+    <div class="highlight-box">
+                        <h3>🗣️ 重要提醒</h3>
+                        <p>請注意，每位醫師執行的臨床作業內容不同，因此各系統的詳細操作步驟也會有所差異。
+            建議您積極向該科部同仁請益，以了解各系統的具體操作細節。
+                          本院電腦全面禁用USB，請多加利用雲端空間做為文件存檔及傳輸。
+                        另外，本院資訊系統還有Wi-Fi、院內信箱、O365系統、主治醫師VM院外連線系統等可供申請，詳請請洽資訊室。</p>
+                    </div>
+</body>
+</html>
