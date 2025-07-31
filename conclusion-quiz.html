@@ -59,7 +59,7 @@
         <div class="bg-white p-4 rounded-lg shadow-inner mt-6">
             <h3 class="font-bold text-xl text-blue-800 mb-3">院長的話</h3>
             <p class="text-gray-700">
-                「親愛的新進醫師們，歡迎您加入奇美醫院這個大家庭！我們深知醫療工作的挑戰與責任，也明白您在面對新環境時可能有的不安。奇美醫院始終秉持『關懷、專業、效率』的核心價值，致力於提供最優質的醫療服務，同時也將每位同仁視為最寶貴的資產。在這裡，您將有機會與頂尖的醫療團隊合作，不斷學習成長，並在臨床、教學、研究各方面發光發熱。我們承諾會成為您最堅實的後盾，提供完善的資源與支持，讓您能夠安心工作，實現個人與專業的理想。期待與您攜手，共同守護民眾健康，開創奇美醫療的新篇章！」
+                親愛的新進醫師們，歡迎您加入奇美醫院這個大家庭！我們深知醫療工作的挑戰與責任，也明白您在面對新環境時可能有的不安。奇美醫院始終秉持『關懷、專業、效率』的核心價值，致力於提供最優質的醫療服務，同時也將每位同仁視為最寶貴的資產。在這裡，您將有機會與頂尖的醫療團隊合作，不斷學習成長，並在臨床、教學、研究各方面發光發熱。我們承諾會成為您最堅實的後盾，提供完善的資源與支持，讓您能夠安心工作，實現個人與專業的理想。期待與您攜手，共同守護民眾健康，開創奇美醫療的新篇章！
             </p>
             <br><br>
               <img src="https://sub.chimei.org.tw/57900/images/07_members/Hung-Jung-Lin.jpg" alt="林宏榮院長" class="mx-auto mb-4 rounded-md w-80">
@@ -74,7 +74,7 @@
         <form id="quizForm" class="space-y-6">
             <!-- Question 1 -->
             <div>
-                <p class="font-semibold text-gray-800 mb-2">1. 在奇美醫院值班時遇到疑難雜症，第一時間應向誰請教？</p>
+                <p class="font-semibold text-gray-800 mb-2">1. 在奇美醫院值班時遇到疑難雜症，可以向誰請教？</p>
                 <div class="flex flex-col space-y-2">
                     <label class="inline-flex items-center">
                         <input type="radio" class="form-radio text-blue-600" name="q1" value="a">
@@ -137,17 +137,66 @@
     </div>
 
     <!-- Signature Section -->
-    <div class="infographic-card bg-gradient-to-br from-gray-100 to-gray-200">
-        <h2 class="infographic-section-title text-gray-800">閱讀確認</h2>
-        <p class="text-gray-700 mb-4 text-center">請輸入您的人事號以確認已閱讀本攻略：</p>
-        <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <input type="text" id="personnelIdInput" placeholder="您的人事號" class="p-3 border border-gray-300 rounded-md w-full sm:w-auto flex-grow focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <button id="confirmReadButton" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-md shadow-lg transition-all duration-300 transform hover:scale-105">
-                確認閱讀
-            </button>
-        </div>
-        <p id="signatureMessage" class="signature-message text-green-600 font-semibold text-center mt-4"></p>
+<div class="infographic-card bg-gradient-to-br from-gray-100 to-gray-200">
+    <h2 class="infographic-section-title text-gray-800">閱讀確認</h2>
+    <p class="text-gray-700 mb-4 text-center">請輸入您的人事號以確認已閱讀本攻略：</p>
+    <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+        <input type="text" id="personnelIdInput" placeholder="您的人事號" class="p-3 border border-gray-300 rounded-md w-full sm:w-auto flex-grow focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <button id="confirmReadButton" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-md shadow-lg transition-all duration-300 transform hover:scale-105">
+            確認閱讀
+        </button>
     </div>
+    <p id="signatureMessage" class="signature-message text-green-600 font-semibold text-center mt-4"></p>
+</div>
+
+<script>
+document.getElementById("confirmReadButton").addEventListener("click", function () {
+    const staffId = document.getElementById("personnelIdInput").value.trim();
+    const messageEl = document.getElementById("signatureMessage");
+
+    // 檢查格式是否為 6 位英文字母或數字
+    if (!/^[A-Za-z0-9]{6}$/.test(staffId)) {
+        messageEl.textContent = "❌ 人事號格式錯誤，請輸入 6 位英文字母或數字";
+        messageEl.classList.remove("text-green-600");
+        messageEl.classList.add("text-red-600");
+        return;
+    }
+
+    // 取得時間
+    const now = new Date();
+    const formattedTime = now.toLocaleString("zh-TW", {
+        year: "numeric", month: "2-digit", day: "2-digit",
+        hour: "2-digit", minute: "2-digit", second: "2-digit"
+    });
+
+    // 準備資料
+    const formData = new URLSearchParams();
+    formData.append("staffId", staffId);
+    formData.append("completionTime", formattedTime);
+
+    // 送出資料到 Google Apps Script
+    fetch("https://script.google.com/macros/s/AKfycbyaGf5OIM13FoDfFCwe7UxaRhqW5jPNpfzHlrorW7pOwqrgUStqw7bfNzRAupxeFv6GDQ/exec", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        if (data.toLowerCase().includes("ok")) {
+            messageEl.textContent = "✅ 已成功紀錄您的確認時間，謝謝您！";
+            messageEl.classList.remove("text-red-600");
+            messageEl.classList.add("text-green-600");
+        } else {
+            throw new Error("Google Script 回傳異常");
+        }
+    })
+    .catch(error => {
+        console.error("送出失敗：", error);
+        messageEl.textContent = "⚠️ 發生錯誤，請稍後再試或聯絡管理員";
+        messageEl.classList.remove("text-green-600");
+        messageEl.classList.add("text-red-600");
+    });
+});
+</script>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
