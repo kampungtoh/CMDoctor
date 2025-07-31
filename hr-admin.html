@@ -1,1 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人事行政篇</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* 這些樣式需要複製到每個獨立的內容頁面中，以確保顯示一致性 */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff; /* Changed to white */
+        }
+        .infographic-card {
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #e2e8f0;
+        }
+        .infographic-section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .icon-large {
+            font-size: 4rem;
+            line-height: 1;
+            display: block;
+            margin: 0 auto 0.5rem; /* Centering the icon */
+        }
+        .list-center-items li {
+            text-align: center;
+            list-style-position: inside; /* Ensures the bullet is inside the centered text */
+        }
+        /* Style for sub-section icons */
+        .sub-section-icon {
+            font-size: 2.5rem; /* Smaller icon for sub-sections */
+            line-height: 1;
+            display: block;
+            margin: 0 auto 0.5rem;
+            color: #3b82f6; /* Blue color for emphasis */
+        }
+        .sub-section-title {
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* font-semibold */
+            color: #1f2937; /* text-gray-900 */
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .sub-section-content ul {
+            padding-left: 1.5rem; /* Indent for list items */
+        }
+        .sub-section-content li {
+            margin-bottom: 0.5rem;
+        }
+        .image-placeholder {
+            width: 100%;
+            height: 200px; /* Adjust height as needed */
+            background-color: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #64748b;
+            border-radius: 0.75rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+      
+      .jieanbao-img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto 1rem auto;
+        }
+    </style>
+</head>
+<body class="p-4">
+    <div class="infographic-card bg-gradient-to-br from-purple-50 to-purple-100">
+        <h2 class="infographic-section-title">人事行政篇</h2>
+        <span class="icon-large text-center">👩‍💼</span>
 
+        <h3 class="sub-section-title">值班與請假管理</h3>
+        <p class="text-gray-700 mb-4 text-center">
+           請各位醫師務必了解值班交班與請假系統，確保您的工作流程順暢。
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                <span class="sub-section-icon">📝</span>
+                <h4 class="font-bold text-lg text-gray-800 mb-2">醫師值班交班與簽到</h4>
+                <ul class="list-disc list-inside text-gray-700 space-y-1">
+                    <li><b>開始值班時，請務必至『住院資訊系統』的『交班紀錄作業』進行交班及簽到。</b></li>
+                    <li>主治醫師假日查房也需要簽到，請參考"臨床篇"。</li>
+                    <li>這樣才能確保病人資訊的連續性與您的值班記錄完整。</li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                <span class="sub-section-icon">🗓️</span>
+                <h4 class="font-bold text-lg text-gray-800 mb-2">醫師請假系統</h4>
+                <ul class="list-disc list-inside text-gray-700 space-y-1">
+                    <li>醫師請假作業已全面資訊化，方便您線上申請。</li>
+                    <li>請假系統位於《系統主程式》『主選單』下拉選單的『全院共同性作業(人資) / 醫師請假資訊化維護作業』進入。<br>(UGY 請假作業請參考教學篇網站，有更詳細的說明。)</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3 class="sub-section-title mt-8">教育訓練與證照要求</h3>
+        <p class="text-gray-700 mb-4 text-center">
+            持續學習與專業認證是醫師生涯的重要部分，請留意相關規定。
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-1 gap-6 mt-6">
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                <span class="sub-section-icon">🎓</span>
+                <h4 class="font-bold text-lg text-gray-800 mb-2">全院員工教育訓練必修學分</h4>
+                <p class="text-gray-700 mb-4">
+                    請務必於每年 <strong>10月31日</strong> 前完成所有必修學分。
+                </p>
+                <img src="Training.jpg" alt="捷安報" class="jieanbao-img">
+                <ul class="list-disc list-inside text-gray-700 space-y-1 mt-4 text-lg">
+                  <strong>特別注意！</strong> <br>
+                  新進人員必須完成 <strong>6個小時</strong> 的感染管制教育積分，其中 <strong>2個小時</strong> 必須為現場課程。</li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                <span class="sub-section-icon">🏅</span>
+                <h4 class="font-bold text-lg text-gray-800 mb-2">急救訓練證照要求</h4>
+                <p class="text-gray-700 mb-4 text-lg">
+                    所有醫師都必須持有有效的急救訓練證照，請定期檢查您的證照是否仍在效期內：
+                </p>
+                <ul class="list-disc list-inside text-gray-700 space-y-1">
+                    <li><strong>住院醫師 (包括 PGY)</strong>：需持有 <strong>ACLS (高級心臟救命術)</strong> 證照。</li>
+                    <li><strong>主治醫師 (非急重症相關單位)</strong>：需持有 <strong>ALS (高級生命支持)</strong> 證照。</li>
+                    <li><strong>主治醫師 (急診醫學部、加護醫學部、麻醉部)</strong>：需持有 <strong>ACLS (高級心臟救命術)</strong> 證照。</li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                <span class="sub-section-icon">🏅</span>
+                <h4 class="font-bold text-lg text-gray-800 mb-2">鎮靜麻醉藥物開立</h4>
+                <p class="text-gray-700 mb-4 text-lg">
+                    醫師必須接受『鎮靜麻醉藥物』訓練方能開立相關藥物，請至『學分得來速』接受線上學習，並定期檢查是否仍在效期內。
+                </p>
+            </div>
+
+             <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                <span class="sub-section-icon">🏅</span>
+                <h4 class="font-bold text-lg text-gray-800 mb-2">主管相關教育訓練</h4>
+                <p class="text-gray-700 mb-4 text-lg">
+                    若您為主管階級，四五級主管應另外每年接受至少一學分的品管主管訓練課程；三級主管以上除每年至少一學分品管主管訓練課程外，每四年需完成五類品管主管訓練課程，包括員工職場復原力Resilience、團隊資源管理TRM、品質指標監測管理、醫療品質改善手法及根本原因分析RCA等。
+                </p>
+            </div>         
+        </div>
+
+        <div class="text-center text-gray-600 text-sm mt-8 p-4 bg-gray-100 rounded-lg shadow-inner">
+            <p>
+                若您對人事相關規定有任何疑問，請參考本院人力資源部人事管理規章，或直接與人資部同仁聯繫。
+            </p>
+        </div>
+    </div>
+</body>
+</html>
